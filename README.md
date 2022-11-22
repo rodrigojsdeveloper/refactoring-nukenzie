@@ -1,5 +1,6 @@
 <p align="center">
     <img src="https://img.shields.io/badge/react-18.2.0-blue">
+    <img src="https://img.shields.io/badge/typescript-4.6.4-blue">
 </p>
 
 # Refactoring NuKenzie
