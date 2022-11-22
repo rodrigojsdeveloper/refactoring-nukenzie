@@ -10,7 +10,7 @@ import { useHistory } from 'react-router-dom'
 import { Card } from '../../components/Card'
 import { useForm } from 'react-hook-form'
 import { ICard } from '../../interfaces'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import * as yup from 'yup'
 
 
@@ -87,7 +87,7 @@ const Dashboard = () => {
                     <Content onSubmit={ handleSubmit(onSubmitFunc) }>
                         <div>
                             <Input
-                            size="m"
+                            sizeInput="m"
                             type="text"
                             name="description"
                             autoComplete="off"
@@ -102,7 +102,7 @@ const Dashboard = () => {
 
                         <section>
                             <Input
-                            size="s"
+                            sizeInput="s"
                             type="text"
                             name="price"
                             autoComplete="off"

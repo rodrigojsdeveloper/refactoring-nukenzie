@@ -3,7 +3,6 @@ import title from '../../assets/Nu-Kenzie.png'
 import logo from '../../assets/Group 277.svg'
 import { useHistory } from 'react-router-dom'
 import { Container, Content } from './style'
-import React from 'react'
 
 
 const Home = () => {

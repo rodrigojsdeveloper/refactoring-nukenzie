@@ -2,7 +2,6 @@ import notFound from '../../assets/notFound.svg'
 import { Button } from '../../components/Button'
 import { useHistory } from 'react-router-dom'
 import { Container } from './style'
-import React from 'react'
 
 
 const NotFound = () => {
