@@ -7,16 +7,12 @@ const Container = styled.button<IButtonStyled>`
     font-weight: 500;
     font-size: 16px;
 
-    border-radius: 8px;
+    border-radius: .25rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-
-    :hover {
-        transform: translateY(-0.15em);
-    }
 
     ${({ size }) => {
 
@@ -37,8 +33,8 @@ const Container = styled.button<IButtonStyled>`
 
             case 's':
                 return css`
-                    padding: 15px;
-                    height: 40px;
+                    padding: 15px 20px;
+                    height: 30px;
                 `
 
             default:
@@ -52,25 +48,56 @@ const Container = styled.button<IButtonStyled>`
 
             case 'home':
                 return css`
-                    color: var(--white);
-                    background: var(--background-button-home);
-                    border: 1px solid var(--background-button-home);
 
-                    :hover {
-                        
-                        box-shadow: 0 0.5em 0.5em -0.4em var(--background-button-home);
+                    color: var(--white);
+                    background-color: var(--background-button-home);
+                    border-radius: 3px;
+                    border: 1px solid var(--background-button-home);
+                    box-shadow: var(--box-shadow-button-dashboard) 0 1px 0 0 inset;
+                    touch-action: manipulation;
+                    vertical-align: baseline;
+                    white-space: nowrap;
+
+                    :hover,
+                    :focus {
+                        background-color: var(--background-button-home-hover);
+                    }
+
+                    :focus {
+                        box-shadow: 0 0 0 4px var(--background-button-home);
+                    }
+
+                    :active {
+                        background-color: var(--background-button-home-hover);
+                        box-shadow: none;
                     }
                 `
             
             case 'dashboard':
                 return css`
-                    color: var(--color-text-header);
-                    background: var(--background-button-dashboard);
-                    border: 1.4px solid var(--background-button-dashboard);
-                    
-                    :hover {
+                
+                    background-color: var(--white);
+                    border: 1px solid var(--border-button);
+                    box-shadow: var(--box-shadow-button) 0 1px 3px 0;
+                    color: var(--color-button);
+                    min-height: 3rem;
+                    transition: all 250ms;
+                    touch-action: manipulation;
+                    vertical-align: baseline;
+
+                    :hover,
+                    :focus {
+                        border-color: var(--border-color-hover-button);
+                        box-shadow: var(--border-button) 0 4px 12px;
+                        transform: translateY(-1px);
                         
-                        box-shadow: 0 0.5em 0.5em -0.4em var(--background-button-dashboard);
+                    }
+
+                    :active {
+                        background-color: var(--background-button-dashboard);
+                        border-color: var(--border-color-hover-button);
+                        box-shadow: var(--box-shadow-button) 0 2px 4px;
+                        transform: translateY(0);
                     }
                 `
 

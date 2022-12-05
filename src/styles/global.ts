@@ -15,13 +15,20 @@ export default createGlobalStyle`
         --white: #FFF;
         --background-home: #212529;
         --background-button-home: #FD377E;
+        --background-button-home-hover: rgba(253, 10, 120);
         --background-header-dashboard: #F8F9FA;
-        --background-button-dashboard: #E9ECEF;
+        --background-button-dashboard: #F0F0F1;
         --color-text-header: #5B6166;
         --color-error-label: #E50914;
         --color-price-card: #343A40;
         --color-box-shadow: rgba(0, 0, 0, 0.25);
         --color-span: #868E96;
+        --border-input: #dcdcdc;
+        --border-button: rgba(0, 0, 0, 0.1);
+        --box-shadow-button: rgba(0, 0, 0, 0.02);
+        --color-button: rgba(0, 0, 0, 0.85);
+        --border-color-hover-button: rgba(0, 0, 0, 0.15);
+        --box-shadow-button-dashboard: rgba(255, 255, 255, .7);
     }
 
     input {
@@ -39,5 +46,15 @@ export default createGlobalStyle`
     
     &::-webkit-scrollbar {
         display: none;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance:textfield;
     }
 `

@@ -8,7 +8,6 @@ const Container = styled.div`
     display: flex;
     width: 100%;
     max-width: 560px;
-    height: 87px;
 
     background: var(--background-header-dashboard);
     border-radius: 4px;
@@ -25,7 +24,6 @@ const Container = styled.div`
 
     & > hr {
         width: 4px;
-        height: 87px;
         border: none;
         border-radius: 4px 0px 0px 4px;
     }
@@ -54,6 +52,7 @@ const Container = styled.div`
     .divCardLeft > span {
         font-size: 12px;
         color: var(--color-price-card);
+        margin-bottom: 10px;
     }
 
     .divCardRight {
@@ -82,13 +81,33 @@ const Container = styled.div`
 
     .divCardRight > button:hover {
         background: url(${ lixeira_hover });
-    }
-
-    @media screen and (max-width: 510px) {
-        
         .divCardRight > span {
             
             margin-right: 20px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        
+        & > div {
+            flex-direction: column;
+        
+            .divCardLeft, .divCardRight {
+                flex-direction: column;
+
+                span {
+                    margin-bottom: 0;
+                }
+
+                h2, span, button {
+                    padding: 0;
+                    margin-top: 10px;
+                }
+
+                button {
+                    margin-bottom: 15px;
+                }
+            }
         }
     }
 `

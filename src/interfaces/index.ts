@@ -46,6 +46,7 @@ export interface Iinput {
     register: UseFormRegister<FieldValues>
     label?: string
     error?: any
+    required: boolean | undefined
 }
 
 export interface IinputStyled {

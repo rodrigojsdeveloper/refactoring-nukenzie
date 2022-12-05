@@ -69,7 +69,7 @@ const Content = styled.form`
 
     width: 363px;
     height: 351px;
-    border: 1px solid var(--background-button-dashboard);
+    border: 1px solid var(--border-input);
     border-radius: 4px;
     padding: 0 20px;
     gap: 10px;
@@ -105,14 +105,13 @@ const Content = styled.form`
             display: flex;
             flex-direction: column;
             justify-content: end;
-            padding-right: 20px;
-                
+            
             width: 100%;
 
             select {
-                background: var(--background-header-dashboard);
-                border: 2px solid var(--background-header-dashboard);
-                border-radius: 8px;
+                background: var(--white);
+                border: 1px solid var(--border-input);
+                border-radius: 4px;
                 padding-left: 5px;
 
                 width: 100%;
@@ -136,7 +135,7 @@ const Content = styled.form`
         
         @media screen and (max-width: 330px) {
         
-            padding: 0 5px;
+            padding: 0 3px;
         }
     }
 

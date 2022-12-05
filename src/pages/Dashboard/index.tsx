@@ -45,18 +45,7 @@ const Dashboard = () => {
         setFilterCards(filterCards.filter((x: ICard) => x !== card))
     }
 
-    const schema = yup.object().shape({
-    
-        description: yup
-            .string()
-            .required('Required description'),
-        
-        price: yup
-            .string()
-            .required('')
-    })
-
-    const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) })
+    const { register, handleSubmit } = useForm()
 
     const onSubmitFunc = (data: any) => {
 
@@ -94,7 +83,7 @@ const Dashboard = () => {
                             placeholder="Enter your description here"
                             register={ register }
                             label="Description"
-                            error={ errors.description?.message }
+                            required={ true } 
                             />
 
                             <span>Ex: Buying clothes</span>
@@ -103,13 +92,13 @@ const Dashboard = () => {
                         <section>
                             <Input
                             sizeInput="s"
-                            type="text"
+                            type="number"
                             name="price"
                             autoComplete="off"
                             placeholder="US$"
                             register={ register }
                             label="Value"
-                            error={ errors.price?.message }
+                            required={ true }
                             />
 
                             <div>

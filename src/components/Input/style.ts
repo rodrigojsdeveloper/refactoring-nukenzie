@@ -19,17 +19,13 @@ const Container = styled.div`
 
 const InputContainer = styled.input<IinputStyled>`
 
-    background: var(--background-header-dashboard);
-    border: 2px solid var(--background-header-dashboard);
-    border-radius: 8px;
+    border: 1px solid var(--border-input);
+    border-radius: 4px;
     padding: 0 16px;
     gap: 10px;
 
     &:focus {
-        background: var(--white);
         border: 2px solid var(--background-home);
-
-        box-shadow: 0px 4px 42px -12px var(--color-box-shadow);
     }
 
     &:focus::-webkit-input-placeholder {
