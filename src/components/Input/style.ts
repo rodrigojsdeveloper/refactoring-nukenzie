@@ -1,5 +1,5 @@
+import { InputStyledProps } from '../../interfaces'
 import styled, { css } from 'styled-components'
-import { IinputStyled } from '../../interfaces'
 
 
 const Container = styled.div`
@@ -17,7 +17,7 @@ const Container = styled.div`
     }
 `
 
-const InputContainer = styled.input<IinputStyled>`
+const InputContainer = styled.input<InputStyledProps>`
 
     border: 1px solid var(--border-input);
     border-radius: 4px;

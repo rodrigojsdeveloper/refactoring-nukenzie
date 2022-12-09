@@ -1,10 +1,10 @@
-import { ICard, IListCardComponent } from '../../interfaces'
+import { ICardProps, IListCardComponentProps } from '../../interfaces'
 import { List, ListHeader, ListBody } from './style'
-import cardsVoids from '../../assets/NoCard.png'
+import cardsVoids from '../../assets/NoCard.svg'
 import { Button } from '../Button'
 
 
-const ListCard = ({ cards, setFilterCards, children }: IListCardComponent) => {
+const ListCard = ({ cards, setFilterCards, children }: IListCardComponentProps) => {
     
     return (
         <List>
@@ -15,10 +15,10 @@ const ListCard = ({ cards, setFilterCards, children }: IListCardComponent) => {
                     <Button size="s" color="dashboard" onClick={ () => setFilterCards([]) }>
                         All
                     </Button>
-                    <Button size="s" color="dashboard" onClick={ () => setFilterCards(cards.filter((card: ICard) => card.option === 'Entry')) }>
+                    <Button size="s" color="dashboard" onClick={ () => setFilterCards(cards.filter((card: ICardProps) => card.option === 'Entry')) }>
                         Entry
                     </Button>
-                    <Button size="s" color="dashboard" onClick={ () => setFilterCards(cards.filter((card: ICard) => card.option === 'Expenses')) }>
+                    <Button size="s" color="dashboard" onClick={ () => setFilterCards(cards.filter((card: ICardProps) => card.option === 'Expenses')) }>
                         Expenses
                     </Button>
                 </nav>

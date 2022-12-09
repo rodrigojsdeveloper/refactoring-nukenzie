@@ -1,8 +1,8 @@
-import { IButtonStyled } from '../../interfaces'
+import { IButtonStyledProps } from '../../interfaces'
 import styled, { css } from 'styled-components'
 
 
-const Container = styled.button<IButtonStyled>`
+const Container = styled.button<IButtonStyledProps>`
 
     font-weight: 500;
     font-size: 16px;

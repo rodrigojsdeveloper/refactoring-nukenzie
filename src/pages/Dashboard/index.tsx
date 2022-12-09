@@ -1,17 +1,15 @@
 import { Container, HeaderStyled, Content } from './style'
 import { useLocalStorage } from '../../components/Hook'
 import { CardTotal } from '../../components/CardTotal'
-import { yupResolver } from '@hookform/resolvers/yup'
 import title from '../../assets/Nu-Kenzie-black.png'
 import { ListCard } from '../../components/ListCard'
 import { Button } from '../../components/Button'
 import { Input } from '../../components/Input'
 import { useHistory } from 'react-router-dom'
+import { ICardProps } from '../../interfaces'
 import { Card } from '../../components/Card'
 import { useForm } from 'react-hook-form'
-import { ICard } from '../../interfaces'
 import { useState } from 'react'
-import * as yup from 'yup'
 
 
 const Dashboard = () => {
@@ -24,7 +22,7 @@ const Dashboard = () => {
 
     const [ option, setOption ] = useState<string>('Entry')
 
-    const addCard = (newCard: ICard) => {
+    const addCard = (newCard: ICardProps) => {
   
         const copyNewCard = { ...newCard }
         
@@ -38,11 +36,11 @@ const Dashboard = () => {
         setCards([...cards, copyNewCard])
     }
   
-    const removeCard = (card: ICard) => {
+    const removeCard = (card: ICardProps) => {
     
-        setCards(cards.filter((x: ICard) => x !== card))
+        setCards(cards.filter((x: ICardProps) => x !== card))
     
-        setFilterCards(filterCards.filter((x: ICard) => x !== card))
+        setFilterCards(filterCards.filter((x: ICardProps) => x !== card))
     }
 
     const { register, handleSubmit } = useForm()
@@ -121,7 +119,7 @@ const Dashboard = () => {
 
                     filterCards.length > 0 ? (
                         
-                        filterCards.map((card: ICard, i: number) => 
+                        filterCards.map((card: ICardProps, i: number) => 
                         <Card 
                         key={ i } 
                         card={ card } 
@@ -130,7 +128,7 @@ const Dashboard = () => {
                         
                     ) : (
 
-                        cards.map((card: ICard, i: number) => 
+                        cards.map((card: ICardProps, i: number) => 
                         <Card key={ i } 
                         card={ card } 
                         removeCard={ removeCard } 

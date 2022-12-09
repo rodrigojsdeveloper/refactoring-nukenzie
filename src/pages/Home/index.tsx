@@ -1,6 +1,6 @@
 import { Button } from '../../components/Button'
-import title from '../../assets/Nu-Kenzie.png'
 import logo from '../../assets/Illustration.svg'
+import title from '../../assets/Nu-Kenzie.png'
 import { useHistory } from 'react-router-dom'
 import { Container, Content } from './style'
 

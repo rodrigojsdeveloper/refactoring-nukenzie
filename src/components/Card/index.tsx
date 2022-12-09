@@ -1,8 +1,8 @@
-import { ICardComponent } from '../../interfaces'
+import { ICardComponentProps } from '../../interfaces'
 import { Container } from './style'
 
 
-const Card = ({ card, removeCard }: ICardComponent) => {
+const Card = ({ card, removeCard }: ICardComponentProps) => {
 
     return (
         <Container>

@@ -2,13 +2,13 @@ import { FieldValues, UseFormRegister } from 'react-hook-form'
 import { MouseEventHandler } from 'react'
 
 
-export interface ICard {
+export interface ICardProps {
     description: string 
     price: number 
     option: string
 }
 
-export interface IButton {
+export interface IButtonProps {
     children: React.ReactNode
     onClick?: MouseEventHandler
     disabled?: boolean | undefined
@@ -17,27 +17,27 @@ export interface IButton {
     color: 'home' | 'dashboard'
 }
 
-export interface IButtonStyled {
+export interface IButtonStyledProps {
     size: string
     color: string
 }
 
-export interface ICardComponent {
-    card: ICard
-    removeCard: (card: ICard) => void
+export interface ICardComponentProps {
+    card: ICardProps
+    removeCard: (card: ICardProps) => void
 }
 
-export interface ICardTotalComponent {
-    cards: ICard[]
+export interface ICardTotalComponentProps {
+    cards: ICardProps[]
 }
 
-export interface IListCardComponent {
-    cards: ICard[]
+export interface IListCardComponentProps {
+    cards: ICardProps[]
     setFilterCards: any
     children: React.ReactNode
 }
 
-export interface Iinput {
+export interface InputProps {
     sizeInput: 'm' | 's'
     type?: string
     name: string
@@ -49,6 +49,6 @@ export interface Iinput {
     required: boolean | undefined
 }
 
-export interface IinputStyled {
+export interface InputStyledProps {
     sizeInput: string
 }

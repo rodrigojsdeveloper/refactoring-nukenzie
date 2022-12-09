@@ -2,7 +2,6 @@ import { Switch, Route } from 'react-router-dom'
 import { Dashboard } from '../pages/Dashboard'
 import { NotFound } from '../pages/NotFound'
 import { Home } from '../pages/Home'
-import React from 'react'
 
 
 const Routes = () => {

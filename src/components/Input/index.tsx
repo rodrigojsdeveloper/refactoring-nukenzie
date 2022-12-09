@@ -1,8 +1,8 @@
 import { Container, InputContainer } from './style'
-import { Iinput } from '../../interfaces'
+import { InputProps } from '../../interfaces'
 
 
-const Input = ({ label, register, name, error, sizeInput, autoComplete, placeholder, type, required }: Iinput) => {
+const Input = ({ label, register, name, error, sizeInput, autoComplete, placeholder, type, required }: InputProps) => {
 
   return (
     <Container>
