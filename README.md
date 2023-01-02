@@ -15,24 +15,12 @@ In the root of the project, open the terminal and type
 yarn
 ```
 
-or
-
-```
-npm install
-```
-
 ## 2. Starting the NuKenzie
 
 In the root of the project, open the terminal and type
 
 ```
 yarn dev
-```
-
-or
-
-```
-npm run dev
 ```
 
 ### Accessing NuKenzie through vercel
