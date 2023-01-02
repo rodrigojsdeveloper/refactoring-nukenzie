@@ -1,143 +1,137 @@
-import { Container, HeaderStyled, Content } from './style'
-import { useLocalStorage } from '../../components/Hook'
-import { CardTotal } from '../../components/CardTotal'
-import title from '../../assets/Nu-Kenzie-black.png'
-import { ListCard } from '../../components/ListCard'
-import { Button } from '../../components/Button'
-import { Input } from '../../components/Input'
-import { useHistory } from 'react-router-dom'
-import { ICardProps } from '../../interfaces'
-import { Card } from '../../components/Card'
-import { useForm } from 'react-hook-form'
-import { useState } from 'react'
-
+import { Container, HeaderStyled, Content } from "./style";
+import { useLocalStorage } from "../../components/Hook";
+import { CardTotal } from "../../components/CardTotal";
+import title from "../../assets/Nu Kenzie-black.svg";
+import { ListCard } from "../../components/ListCard";
+import { Button } from "../../components/Button";
+import { Input } from "../../components/Input";
+import { useNavigate } from "react-router-dom";
+import { ICardProps } from "../../interfaces";
+import { Card } from "../../components/Card";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
 
-    const history = useHistory()
+  const [cards, setCards] = useLocalStorage("Nu Kenzie: cards", []);
 
-    const [ cards, setCards ] = useLocalStorage('Nu Kenzie: cards', [])
+  const [filterCards, setFilterCards] = useLocalStorage(
+    "Nu Kenzie: filter",
+    []
+  );
 
-    const [ filterCards, setFilterCards ] = useLocalStorage('Nu Kenzie: filter', [])
+  const [option, setOption] = useState<string>("Entry");
 
-    const [ option, setOption ] = useState<string>('Entry')
+  const addCard = (newCard: ICardProps) => {
+    const copyNewCard = { ...newCard };
 
-    const addCard = (newCard: ICardProps) => {
-  
-        const copyNewCard = { ...newCard }
-        
-        if(newCard.option === 'Expenses') {
+    if (newCard.option === "Expenses") {
+      +copyNewCard.price;
 
-            +copyNewCard.price
-
-            copyNewCard.price = -copyNewCard.price
-        }
-    
-        setCards([...cards, copyNewCard])
-    }
-  
-    const removeCard = (card: ICardProps) => {
-    
-        setCards(cards.filter((x: ICardProps) => x !== card))
-    
-        setFilterCards(filterCards.filter((x: ICardProps) => x !== card))
+      copyNewCard.price = -copyNewCard.price;
     }
 
-    const { register, handleSubmit } = useForm()
+    setCards([...cards, copyNewCard]);
+  };
 
-    const onSubmitFunc = (data: any) => {
+  const removeCard = (card: ICardProps) => {
+    setCards(cards.filter((x: ICardProps) => x !== card));
 
-        const { description, price } = data
+    setFilterCards(filterCards.filter((x: ICardProps) => x !== card));
+  };
 
-        const newData = { description, price, option }
+  const { register, handleSubmit } = useForm();
 
-        addCard(newData)
-    }
+  const onSubmitFunc = (data: any) => {
+    const { description, price } = data;
 
-    return (
-        <>
-            <HeaderStyled>
-                <div>
-                    <img src={ title } alt="Nu Kenzie" />
-                    
-                    <Button
-                    size="s"
-                    color="dashboard"
-                    onClick={ () => history.push('/', { message: 'You are home' } ) }
-                    >Start</Button>
-                </div>
-            </HeaderStyled>
-            
-            <Container>
-                
-                <div className="divForm">
-                    <Content onSubmit={ handleSubmit(onSubmitFunc) }>
-                        <div>
-                            <Input
-                            sizeInput="m"
-                            type="text"
-                            name="description"
-                            autoComplete="off"
-                            placeholder="Enter your description here"
-                            register={ register }
-                            label="Description"
-                            required={ true } 
-                            />
+    const newData = { description, price, option };
 
-                            <span>Ex: Buying clothes</span>
-                        </div>
+    addCard(newData);
+  };
 
-                        <section>
-                            <Input
-                            sizeInput="s"
-                            type="number"
-                            name="price"
-                            autoComplete="off"
-                            placeholder="US$"
-                            register={ register }
-                            label="Value"
-                            required={ true }
-                            />
+  return (
+    <>
+      <HeaderStyled>
+        <div>
+          <img src={title} alt="Nu Kenzie" />
 
-                            <div>
-                                <label>Type of value</label>
+          <Button size="s" color="dashboard" onClick={() => navigate("/")}>
+            Start
+          </Button>
+        </div>
+      </HeaderStyled>
 
-                                <select name="options" onChange={ e => setOption(e.target.value) }>
-                                    <option>Entry</option>
-                                    <option>Expenses</option>
-                                </select>
-                            </div>
-                        </section>
+      <Container>
+        <div className="divForm">
+          <Content onSubmit={handleSubmit(onSubmitFunc)}>
+            <div>
+              <Input
+                sizeInput="m"
+                type="text"
+                name="description"
+                autoComplete="off"
+                placeholder="Enter your description here"
+                register={register}
+                label="Description"
+                required={true}
+              />
 
-                        <Button type="submit" size="l" color="home">Insert value</Button>
-                    </Content>
+              <span>Ex: Buying clothes</span>
+            </div>
 
-                    { cards.length > 0 && <CardTotal cards={ filterCards.length > 0 ? filterCards : cards } /> }
-                </div>
+            <section>
+              <Input
+                sizeInput="s"
+                type="number"
+                name="price"
+                autoComplete="off"
+                placeholder="US$"
+                register={register}
+                label="Value"
+                required={true}
+              />
 
-                <ListCard cards={ cards } setFilterCards={ setFilterCards } children={
+              <div>
+                <label>Type of value</label>
 
-                    filterCards.length > 0 ? (
-                        
-                        filterCards.map((card: ICardProps, i: number) => 
-                        <Card 
-                        key={ i } 
-                        card={ card } 
-                        removeCard={ removeCard } 
-                        />)
-                        
-                    ) : (
+                <select
+                  name="options"
+                  onChange={(e) => setOption(e.target.value)}
+                >
+                  <option>Entry</option>
+                  <option>Expenses</option>
+                </select>
+              </div>
+            </section>
 
-                        cards.map((card: ICardProps, i: number) => 
-                        <Card key={ i } 
-                        card={ card } 
-                        removeCard={ removeCard } 
-                        />)
-                    )
-                } />
-            </Container>
-        </>
-    )
-}
+            <Button type="submit" size="l" color="home">
+              Insert value
+            </Button>
+          </Content>
 
-export { Dashboard }
+          {cards.length > 0 && (
+            <CardTotal cards={filterCards.length > 0 ? filterCards : cards} />
+          )}
+        </div>
+
+        <ListCard
+          cards={cards}
+          setFilterCards={setFilterCards}
+          children={
+            filterCards.length > 0
+              ? filterCards.map((card: ICardProps, i: number) => (
+                  <Card key={i} card={card} removeCard={removeCard} />
+                ))
+              : cards.map((card: ICardProps, i: number) => (
+                  <Card key={i} card={card} removeCard={removeCard} />
+                ))
+          }
+        />
+      </Container>
+    </>
+  );
+};
+
+export { Dashboard };

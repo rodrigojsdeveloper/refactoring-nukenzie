@@ -1,24 +1,16 @@
-import { Switch, Route } from 'react-router-dom'
-import { Dashboard } from '../pages/Dashboard'
-import { NotFound } from '../pages/NotFound'
-import { Home } from '../pages/Home'
+import { Route, Routes } from "react-router-dom";
+import { Dashboard } from "../pages/Dashboard";
+import { NotFound } from "../pages/NotFound";
+import { Home } from "../pages/Home";
 
+const AllRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route index path="/" element={<Home />} />
+      <Route element={<NotFound />} />
+    </Routes>
+  );
+};
 
-const Routes = () => {
-    
-    return (
-        <Switch>
-            <Route path="/dashboard">
-                <Dashboard />
-            </Route>
-
-            <Route exact path="/">
-                <Home />
-            </Route>
-
-            <Route component={ NotFound } />
-        </Switch>
-    )
-}
-
-export { Routes }
+export { AllRoutes };

@@ -1,6 +1,5 @@
-import { Routes } from './routes'
+import { AllRoutes } from "./routes";
 
+const App = () => <AllRoutes />;
 
-const App = () => <Routes />
-
-export { App }
+export { App };
