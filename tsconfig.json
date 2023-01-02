@@ -17,6 +17,5 @@
     "jsx": "react-jsx",
     "typeRoots": ["node_modules/yup"]
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src"]
 }
