@@ -17,7 +17,7 @@ const Home = () => {
             <h1>Centralize control of your finances</h1>
           </div>
 
-          <span>quickly and safely</span>
+          <small>quickly and safely</small>
 
           <div className="divBotao">
             <Button
@@ -31,7 +31,7 @@ const Home = () => {
         </div>
 
         <div className="logo">
-          <img src={logo} alt="Nu Kenzie" />
+          <img src={logo} alt="Illustration" />
         </div>
       </Content>
     </Container>

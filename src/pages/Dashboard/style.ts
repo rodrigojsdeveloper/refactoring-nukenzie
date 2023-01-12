@@ -55,6 +55,10 @@ const HeaderStyled = styled.header`
 
   @media (max-width: 300px) {
     padding: 0 20px;
+
+    & > div img {
+      width: 100px;
+    }
   }
 `;
 

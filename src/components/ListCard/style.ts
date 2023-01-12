@@ -39,10 +39,10 @@ const ListHeader = styled.div`
 
     @media (max-width: 320px) {
       flex-direction: column;
-
+      width: 100%;
       button {
         margin: 5px 0;
-        padding: 0 85px;
+        width: 100%;
       }
     }
   }

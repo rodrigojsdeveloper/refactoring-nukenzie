@@ -25,7 +25,7 @@ const Content = styled.div`
     line-height: 48px;
   }
 
-  & > div span {
+  & > div small {
     font-size: 16px;
   }
 
@@ -36,17 +36,8 @@ const Content = styled.div`
     padding: 23px 0;
   }
 
-  .divBotao {
-    button {
-      width: 100%;
-
-      @media (min-width: 355px) {
-        width: unset;
-      }
-    }
-  }
-
   .logo {
+    display: flex;
     align-items: center;
     padding: 20px;
 
@@ -55,9 +46,27 @@ const Content = styled.div`
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
     .logo {
-      display: none;
+      padding: 0;
+      img {
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    & > div div,
+    .divBotao,
+    button {
+      max-width: unset;
+    }
+
+    button {
+      padding: 0;
     }
   }
 `;
