@@ -63,6 +63,7 @@ const Content = styled.div`
     .divBotao,
     button {
       max-width: unset;
+      width: 100%;
     }
 
     button {
