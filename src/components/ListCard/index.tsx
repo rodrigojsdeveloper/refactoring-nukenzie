@@ -44,7 +44,7 @@ const ListCard = ({
 
       <ListBody>
         {cards.length > 0 ? (
-          <>{children}</>
+          <menu>{children}</menu>
         ) : (
           <>
             <h2>You don't have any releases yet.</h2>

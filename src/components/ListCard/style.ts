@@ -68,6 +68,11 @@ const ListBody = styled.div`
   img {
     width: 100%;
   }
+
+  menu {
+    height: 679px;
+    overflow-y: auto;
+  }
 `;
 
 export { List, ListHeader, ListBody };

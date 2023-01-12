@@ -45,6 +45,13 @@ const Container = styled.div`
     flex-direction: column;
     font-size: 16px;
     color: var(--background-home);
+
+    & h2 {
+      max-width: 285px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 
   .divCardLeft > span {
@@ -84,7 +91,7 @@ const Container = styled.div`
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @media (max-width: 600px) {
     & > div {
       flex-direction: column;
 
@@ -106,6 +113,17 @@ const Container = styled.div`
         button {
           margin-bottom: 15px;
         }
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+
+    .divCardLeft {
+      & > h2 {
+        white-space: unset;
+        max-width: unset;
+        font-size: 14px;
       }
     }
   }

@@ -1,18 +1,16 @@
-import { Container, HeaderStyled, Content } from "./style";
+import { Container, Content } from "./style";
 import { useLocalStorage } from "../../components/Hook";
 import { CardTotal } from "../../components/CardTotal";
-import title from "../../assets/Nu Kenzie-black.svg";
 import { ListCard } from "../../components/ListCard";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
-import { useNavigate } from "react-router-dom";
 import { ICardProps } from "../../interfaces";
 import { Card } from "../../components/Card";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { Header } from "../../components/Header";
 
 const Dashboard = () => {
-  const navigate = useNavigate();
 
   const [cards, setCards] = useLocalStorage("Nu Kenzie: cards", []);
 
@@ -53,15 +51,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <HeaderStyled>
-        <div>
-          <img src={title} alt="Nu Kenzie" />
-
-          <Button size="s" color="dashboard" onClick={() => navigate("/")}>
-            Start
-          </Button>
-        </div>
-      </HeaderStyled>
+      <Header />
 
       <Container>
         <div className="divForm">
