@@ -1,17 +1,29 @@
 import lixeira_hover from "../../assets/trash-hover.svg";
+import styled, { keyframes } from "styled-components";
 import lixeira from "../../assets/trash.svg";
-import styled from "styled-components";
+
+const cardAnimation = keyframes`
+  to {
+    transform: translate(0);
+    opacity: 1
+  }
+`;
 
 const Container = styled.div`
   display: flex;
+  flex-direction: row;
+
   width: 100%;
   max-width: 560px;
 
-  background: var(--background-header-dashboard);
   border-radius: 4px;
-  margin-bottom: 35px;
+  background: var(--background-header-dashboard);
 
-  flex-direction: row;
+  transform: translate(-100px);
+  opacity: 0;
+
+  margin-bottom: 35px;
+  animation: ${cardAnimation} 0.5s ease forwards;
 
   &:hover {
     background: var(--white);
@@ -118,7 +130,6 @@ const Container = styled.div`
   }
 
   @media (max-width: 320px) {
-
     .divCardLeft {
       & > h2 {
         white-space: unset;
