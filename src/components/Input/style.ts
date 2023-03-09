@@ -21,6 +21,8 @@ const InputContainer = styled.input<InputStyledProps>`
   padding: 0 16px;
   gap: 10px;
 
+  width: 100%;
+
   &:focus {
     border: 2px solid var(--background-home);
   }
@@ -34,14 +36,11 @@ const InputContainer = styled.input<InputStyledProps>`
       case "m":
         return css`
           height: 52.8px;
-          width: 100%;
           max-width: 314px;
         `;
 
       case "s":
         return css`
-          width: 100%;
-          max-width: 128px;
           height: 48px;
         `;
 

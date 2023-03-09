@@ -51,3 +51,7 @@ export interface InputProps {
 export interface InputStyledProps {
   sizeInput: string;
 }
+
+export interface IForm {
+  addCard: (newCard: ICardProps) => void;
+}
