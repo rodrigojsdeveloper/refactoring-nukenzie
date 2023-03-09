@@ -19,6 +19,8 @@ const Container = styled.a<IButtonLinkStyledProps>`
   vertical-align: baseline;
   touch-action: manipulation;
 
+  transition: 0.5s;
+
   ${({ size }) => {
     switch (size) {
       case "small":
@@ -50,6 +52,8 @@ const Container = styled.a<IButtonLinkStyledProps>`
           white-space: nowrap;
 
           &:hover {
+            box-shadow: none;
+            border-color: var(--color-primary-2);
             background-color: var(--color-primary-2);
           }
         `;

@@ -23,6 +23,11 @@ const Container = styled.header`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    & > img {
+      width: 123px;
+      height: 20px;
+    }
   }
 
   @media (max-width: 1024px) {

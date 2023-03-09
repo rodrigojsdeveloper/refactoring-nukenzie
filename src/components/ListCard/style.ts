@@ -86,6 +86,8 @@ const Container = styled.div`
 
     & > img {
       width: 100%;
+      max-width: 550px;
+      max-height: 324px;
     }
 
     & > menu {

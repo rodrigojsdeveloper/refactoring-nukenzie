@@ -23,6 +23,11 @@ const Container = styled.div`
     align-items: center;
 
     & > div {
+      & > img {
+        width: 123px;
+        height: 20px;
+      }
+
       & > h1 {
         width: 100%;
         max-width: 324px;
@@ -39,6 +44,10 @@ const Container = styled.div`
     }
 
     & > img {
+      width: 100%;
+      max-width: 593px;
+      max-height: 593px;
+
       margin-left: 20px;
     }
 
@@ -49,12 +58,6 @@ const Container = styled.div`
       & > img {
         margin-left: 0;
         margin-top: 60px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      & > img {
-        width: 100%;
       }
     }
   }
