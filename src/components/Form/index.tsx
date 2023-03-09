@@ -63,7 +63,7 @@ const Form = ({ addCard }: IForm) => {
       </div>
 
       <Button type="submit" size="l" color="home">
-        Insert value
+        Inserir valor
       </Button>
     </Container>
   );

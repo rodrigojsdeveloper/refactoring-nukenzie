@@ -10,17 +10,17 @@ const cardAnimation = keyframes`
 `;
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-
   width: 100%;
   max-width: 560px;
+
+  display: flex;
+  flex-direction: row;
 
   border-radius: 4px;
   background: var(--background-header-dashboard);
 
-  transform: translate(-100px);
   opacity: 0;
+  transform: translate(-100px);
 
   margin-bottom: 35px;
   animation: ${cardAnimation} 0.5s ease forwards;

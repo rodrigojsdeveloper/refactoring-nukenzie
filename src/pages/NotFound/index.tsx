@@ -1,24 +1,19 @@
 import notFound from "../../assets/notFound.svg";
-import { Button } from "../../components/Button";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Container } from "./style";
 
 const NotFound = () => {
-  const navigate = useNavigate();
-
   return (
     <Container>
       <div>
-        <h1>Ooops!</h1>
+        <h1>Ops!</h1>
 
         <p>
-          We couldn't find the page you were looking for, <b>let's try again</b>
-          .
+          Não encontramos a página que você estava procurando,{" "}
+          <b>vamos tentar novamente</b>.
         </p>
 
-        <Button size="l" color="home" onClick={() => navigate("/")}>
-          Go to home
-        </Button>
+        <Link to="/">Ir para home</Link>
       </div>
 
       <img src={notFound} alt="error" />

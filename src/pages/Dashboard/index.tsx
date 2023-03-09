@@ -1,11 +1,11 @@
 import { useLocalStorage } from "../../components/Hook";
+import { CardTotal } from "../../components/CardTotal";
 import { ListCard } from "../../components/ListCard";
 import { Header } from "../../components/Header";
 import { ICardProps } from "../../interfaces";
 import { Card } from "../../components/Card";
 import { Form } from "../../components/Form";
 import { Container, Content } from "./style";
-import { CardTotal } from "../../components/CardTotal";
 
 const Dashboard = () => {
   const [cards, setCards] = useLocalStorage("Nu Kenzie: cards", []);
@@ -36,7 +36,6 @@ const Dashboard = () => {
   return (
     <>
       <Header />
-
       <Container>
         <Content>
           <Form addCard={addCard} />

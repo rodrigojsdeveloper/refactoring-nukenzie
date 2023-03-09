@@ -7,7 +7,7 @@ const CardTotal = ({ cards }: ICardTotalComponentProps) => {
   ChartJS.register(ArcElement, Tooltip, Legend);
 
   const data = {
-    labels: ["Entry", "Expenses"],
+    labels: ["Entrada", "Despesas"],
     datasets: [
       {
         label: "# of Votes",
@@ -35,9 +35,9 @@ const CardTotal = ({ cards }: ICardTotalComponentProps) => {
   return (
     <Container>
       <p>
-        Amount:{" "}
-        <span>
-          ${" "}
+        Valor total:{" "}
+        <p>
+          R${" "}
           {cards
             .reduce(
               (valoAnterior, valorAtual) => valoAnterior + +valorAtual.price,
@@ -45,7 +45,7 @@ const CardTotal = ({ cards }: ICardTotalComponentProps) => {
             )
             .toFixed(2)
             .replace(".", ",")}
-        </span>
+        </p>
       </p>
       <Doughnut data={data} />
     </Container>

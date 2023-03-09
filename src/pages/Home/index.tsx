@@ -1,39 +1,24 @@
-import { Button } from "../../components/Button";
 import logo from "../../assets/Illustration.svg";
 import title from "../../assets/Nu Kenzie.svg";
-import { useNavigate } from "react-router-dom";
-import { Container, Content } from "./style";
+import { Link } from "react-router-dom";
+import { Container } from "./style";
 
 const Home = () => {
-  const navigate = useNavigate();
-
   return (
     <Container>
-      <Content>
+      <div>
         <div>
           <img src={title} alt="Nu Kenzie" />
 
-          <div>
-            <h1>Centralize control of your finances</h1>
-          </div>
+          <h1>Centralize o controle de suas finanças</h1>
 
-          <small>quickly and safely</small>
+          <p>com rapidez e segurança</p>
 
-          <div className="divBotao">
-            <Button
-              size="m"
-              color="home"
-              onClick={() => navigate("/dashboard")}
-            >
-              Start
-            </Button>
-          </div>
+          <Link to="/dashboard">Começar</Link>
         </div>
 
-        <div className="logo">
-          <img src={logo} alt="Illustration" />
-        </div>
-      </Content>
+        <img src={logo} alt="Ilustração" />
+      </div>
     </Container>
   );
 };

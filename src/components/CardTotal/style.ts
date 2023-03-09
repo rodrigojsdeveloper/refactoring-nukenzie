@@ -3,23 +3,32 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100%;
   max-width: 361px;
-  padding: 10px;
-
-  background: var(--white);
-  border: 1px solid var(--border-input);
-
-  border-radius: 4px;
-  margin-top: 15px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  p {
-    padding: 10px 0;
-    font-weight: bold;
+  border-radius: 4px;
+  background: var(--white);
+  border: 1px solid var(--border-input);
 
-    span {
+  padding: 10px;
+  margin-top: 15px;
+
+  & > p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    padding: 10px 0;
+
+    & > p {
+      padding-left: 7px;
+
       color: var(--background-button-home);
     }
   }
