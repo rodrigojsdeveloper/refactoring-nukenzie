@@ -34,7 +34,7 @@ yarn dev
 https://refactoring-nukenzie.vercel.app/
 ```
 
-### Developer
+### Desenvolvedor
 
 <div>
 	<a href="https://www.linkedin.com/in/rodrigo-de-jesus-silva">
