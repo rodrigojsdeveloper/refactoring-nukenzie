@@ -17,7 +17,7 @@ const Container = styled.div`
   flex-direction: row;
 
   border-radius: 4px;
-  background-color: var(--background-header-dashboard);
+  background-color: var(--grey-1);
 
   opacity: 0;
   transform: translate(-100px);
@@ -52,7 +52,7 @@ const Container = styled.div`
 
       & h2 {
         font-size: 16px;
-        color: var(--background-home);
+        color: var(--grey-4);
 
         overflow: hidden;
         text-overflow: ellipsis;
@@ -63,7 +63,7 @@ const Container = styled.div`
 
       & > span {
         font-size: 12px;
-        color: var(--color-price-card);
+        color: var(--grey-6);
       }
     }
 
@@ -87,7 +87,7 @@ const Container = styled.div`
 
         cursor: pointer;
         background: url(${lixeira});
-        background-color: var(--background-button-dashboard);
+        background-color: var(--grey-5);
 
         transition: 1s;
 

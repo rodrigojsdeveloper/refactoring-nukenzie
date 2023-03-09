@@ -42,31 +42,31 @@ const Container = styled.a<IButtonLinkStyledProps>`
     switch (color) {
       case "pink":
         return css`
-          color: var(--white);
-          background-color: var(--background-button-home);
-          border: 1px solid var(--background-button-home);
-          box-shadow: var(--box-shadow-button-dashboard) 0 1px 0 0 inset;
+          color: var(--color-white);
+          background-color: var(--color-primary);
+          border: 1px solid var(--color-primary);
+          box-shadow: var(--shadow-6) 0 1px 0 0 inset;
 
           white-space: nowrap;
 
           &:hover {
-            background-color: var(--background-button-home-hover);
+            background-color: var(--color-primary-2);
           }
         `;
 
       case "gray":
         return css`
-          color: var(--color-button);
-          background-color: var(--white);
-          border: 1px solid var(--border-button);
-          box-shadow: var(--box-shadow-button) 0 1px 3px 0;
+          color: var(--shadow-5);
+          background-color: var(--color-white);
+          border: 1px solid var(--shadow);
+          box-shadow: var(--shadow-2) 0 1px 3px 0;
 
           transition: all 250ms;
 
           &:hover {
             transform: translateY(-1px);
-            box-shadow: var(--border-button) 0 4px 12px;
-            border-color: var(--border-color-hover-button);
+            box-shadow: var(--shadow) 0 4px 12px;
+            border-color: var(--shadow-3);
           }
         `;
 

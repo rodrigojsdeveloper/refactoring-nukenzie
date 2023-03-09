@@ -9,14 +9,14 @@ const Container = styled.form`
   justify-content: center;
 
   border-radius: 4px;
-  border: 1px solid var(--border-input);
+  border: 1px solid var(--grey-7);
 
   gap: 10px;
   padding: 30px 20px;
 
   & > div:nth-child(1) {
     & > span {
-      color: var(--color-span);
+      color: var(--grey-3);
       font-size: 12px;
       padding-top: 5px;
     }
@@ -34,7 +34,7 @@ const Container = styled.form`
       font-size: 12px;
 
       padding: 10px 0 5px 0;
-      color: var(--background-home);
+      color: var(--grey-4);
     }
 
     & > select {
@@ -42,8 +42,8 @@ const Container = styled.form`
       height: 48px;
 
       border-radius: 4px;
-      background-color: var(--white);
-      border: 1px solid var(--border-input);
+      background-color: var(--color-white);
+      border: 1px solid var(--grey-7);
 
       padding: 0 10px;
       cursor: pointer;
@@ -61,7 +61,7 @@ const Container = styled.form`
 
     font-weight: 500;
     font-size: 16px;
-    color: var(--white);
+    color: var(--color-white);
 
     display: flex;
     flex-direction: row;
@@ -72,16 +72,16 @@ const Container = styled.form`
     padding: 15px;
 
     border-radius: 4px;
-    background-color: var(--background-button-home);
-    border: 1px solid var(--background-button-home);
-    box-shadow: var(--box-shadow-button-dashboard) 0 1px 0 0 inset;
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    box-shadow: var(--shadow-6) 0 1px 0 0 inset;
 
     white-space: nowrap;
     vertical-align: baseline;
     touch-action: manipulation;
 
     &:hover {
-      background-color: var(--background-button-home-hover);
+      background-color: var(--color-primary-2);
     }
   }
 `;

@@ -7,16 +7,12 @@ const Container = styled.div`
   div {
     padding: 10px 0 5px 0;
     font-size: 12px;
-    color: var(--background-home);
-
-    span {
-      color: var(--color-error-label);
-    }
+    color: var(--grey-4);
   }
 `;
 
 const InputContainer = styled.input<InputStyledProps>`
-  border: 1px solid var(--border-input);
+  border: 1px solid var(--grey-7);
   border-radius: 4px;
   padding: 0 16px;
   gap: 10px;
@@ -24,7 +20,7 @@ const InputContainer = styled.input<InputStyledProps>`
   width: 100%;
 
   &:focus {
-    border: 2px solid var(--background-home);
+    border: 2px solid var(--grey-4);
   }
 
   &:focus::-webkit-input-placeholder {

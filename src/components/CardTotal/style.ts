@@ -9,8 +9,8 @@ const Container = styled.div`
   align-items: center;
 
   border-radius: 4px;
-  background: var(--white);
-  border: 1px solid var(--border-input);
+  background-color: var(--color-white);
+  border: 1px solid var(--grey-7);
 
   padding: 10px;
   margin-top: 15px;
@@ -29,7 +29,7 @@ const Container = styled.div`
     & > p {
       padding-left: 7px;
 
-      color: var(--background-button-home);
+      color: var(--color-primary);
     }
   }
 `;

@@ -1,59 +1,65 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
+	* {
+		margin: 0;
+		border: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: "Nunito", sans-serif;
+	}
 
-    * {
-        margin: 0;
-        border: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Nunito", sans-serif;
-    }
+	:root {
+		--color-primary: #FD377E;
+		--color-primary-2: #E34981;
+		
+		--grey-7: #DCDCDC;
+		--grey-6: #343A40;
+		--grey-5: #F0F0F1;
+		--grey-4: #212529;
+		--grey-3: #868E96;
+		--grey-2: #E9ECEF;
+		--grey-1: #F8F9FA;
+		
+		--color-white: #FFFFFF;
 
-    :root {
-        --white: #FFF;
-        --background-home: #212529;
-        --background-button-home: #FD377E;
-        --background-button-home-hover: rgba(253, 10, 120);
-        --background-header-dashboard: #F8F9FA;
-        --background-button-dashboard: #F0F0F1;
-        --color-text-header: #5B6166;
-        --color-error-label: #E50914;
-        --color-price-card: #343A40;
-        --color-box-shadow: rgba(0, 0, 0, 0.25);
-        --color-span: #868E96;
-        --border-input: #dcdcdc;
-        --border-button: rgba(0, 0, 0, 0.1);
-        --box-shadow-button: rgba(0, 0, 0, 0.02);
-        --color-button: rgba(0, 0, 0, 0.85);
-        --border-color-hover-button: rgba(0, 0, 0, 0.15);
-        --box-shadow-button-dashboard: rgba(255, 255, 255, .7);
-    }
+		--shadow: rgba(0, 0, 0, 0.1);
+		--shadow-2: rgba(0, 0, 0, 0.02);
+		--shadow-3: rgba(0, 0, 0, 0.15);
+		--shadow-4: rgba(0, 0, 0, 0.25);
+		--shadow-5: rgba(0, 0, 0, 0.85);
+		--shadow-6: rgba(255, 255, 255, .7);
+	}
 
-    input {
-        outline: none;
-    }
+	body {
+		color: var(--grey-4);
+		background-color: var(--color-white);
+	}
 
-    button {
-        cursor: pointer;
-        transition: .5s;
-    }
+	input {
+		outline: none;
+	}
 
-    a {
-        text-decoration: none;
-    }
-    
-    &::-webkit-scrollbar {
-        display: none;
-    }
+	button {
+		cursor: pointer;
+		transition: .5s;
+	}
 
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
+	a {
+		text-decoration: none;
+	}
+	
+	&::-webkit-scrollbar {
+		display: none;
+	}
 
-    input[type=number] {
-        -moz-appearance:textfield;
-    }
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	input[type=number] {
+		-moz-appearance:textfield;
+	}
 `;

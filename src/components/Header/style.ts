@@ -10,8 +10,8 @@ const Container = styled.header`
 
   padding: 0 40px;
 
-  background-color: var(--background-header-dashboard);
-  box-shadow: 0px 4px 32px -12px var(--color-box-shadow);
+  background-color: var(--grey-1);
+  box-shadow: 0px 4px 32px -12px var(--shadow-4);
 
   & > div {
     width: 100%;

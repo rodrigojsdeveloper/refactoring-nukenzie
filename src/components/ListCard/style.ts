@@ -15,7 +15,7 @@ const Container = styled.div`
 
     & > h2 {
       font-size: 16px;
-      color: var(--background-home);
+      color: var(--grey-4);
     }
 
     & > div {
@@ -30,7 +30,7 @@ const Container = styled.div`
 
         font-weight: 500;
         font-size: 16px;
-        color: var(--color-button);
+        color: var(--shadow-5);
 
         display: flex;
         flex-direction: row;
@@ -41,9 +41,9 @@ const Container = styled.div`
         padding: 15px;
 
         border-radius: 4px;
-        background-color: var(--white);
-        border: 1px solid var(--border-button);
-        box-shadow: var(--box-shadow-button) 0 1px 3px 0;
+        background-color: var(--color-white);
+        border: 1px solid var(--shadow);
+        box-shadow: var(--shadow-2) 0 1px 3px 0;
 
         transition: all 250ms;
         vertical-align: baseline;
@@ -51,8 +51,8 @@ const Container = styled.div`
 
         &:hover {
           transform: translateY(-1px);
-          box-shadow: var(--border-button) 0 4px 12px;
-          border-color: var(--border-color-hover-button);
+          box-shadow: var(--shadow) 0 4px 12px;
+          border-color: var(--shadow-3);
         }
       }
 
