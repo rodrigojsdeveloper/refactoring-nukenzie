@@ -1,36 +1,46 @@
-<p align="center">
-    <img src="https://img.shields.io/badge/react-18.2.0-blue">
-    <img src="https://img.shields.io/badge/typescript-4.6.4-blue">
-</p>
+&#xa0;
 
-# Refactoring NuKenzie
+<div align="center">
+	<img src="https://img.shields.io/badge/react-18.2.0-blue">
 
-NuKenzie, a cost control platform.
+ <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Rodrigodeveloperjr/teste-front-end-jr?color=56BEB8&logo=typescript">
+</div>
 
-## 1. Installing dependencies
+<br>
 
-In the root of the project, open the terminal and type
+# NuKenzie
+
+NuKenzie, uma plataforma de controle de custos.
+
+## 1. Instalando dependências
+
+Na raiz do projeto, abra o terminal e digite
 
 ```
 yarn
 ```
 
-## 2. Starting the NuKenzie
+## 2. Começando o NuKenzie
 
-In the root of the project, open the terminal and type
+Na raiz do projeto, abra o terminal e digite
 
 ```
 yarn dev
 ```
 
-### Accessing NuKenzie through vercel
+### Acessando o NuKenzie pelo vercel
 
 ```
-https://refactoring-nukenzie.vercel.app
+https://refactoring-nukenzie.vercel.app/
 ```
 
 ### Developer
 
-<a href="https://www.linkedin.com/in/rodrigo-de-jesus-silva">
-    <img src="src/assets/icon-linkedin.png" />
-</a>
+<div>
+	<a href="https://www.linkedin.com/in/rodrigo-de-jesus-silva">
+		<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+	</a>
+	<a href="https://www.instagram.com/eaedigooo/">
+	<img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+	</a>
+</div>
