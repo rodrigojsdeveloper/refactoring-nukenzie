@@ -36,45 +36,6 @@ const Container = styled.div`
       & > p {
         padding-bottom: 15px;
       }
-
-      & > a {
-        height: 48px;
-
-        font-weight: 500;
-        font-size: 16px;
-        color: var(--white);
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-
-        gap: 10px;
-        padding: 15px;
-
-        border-radius: 4px;
-        background-color: var(--background-button-home);
-        border: 1px solid var(--background-button-home);
-        box-shadow: var(--box-shadow-button-dashboard) 0 1px 0 0 inset;
-
-        white-space: nowrap;
-        vertical-align: baseline;
-        touch-action: manipulation;
-
-        :hover,
-        :focus {
-          background-color: var(--background-button-home-hover);
-        }
-
-        :focus {
-          box-shadow: 0 0 0 4px var(--background-button-home);
-        }
-
-        :active {
-          background-color: var(--background-button-home-hover);
-          box-shadow: none;
-        }
-      }
     }
 
     & > img {

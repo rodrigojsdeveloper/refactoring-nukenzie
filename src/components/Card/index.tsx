@@ -6,21 +6,21 @@ const Card = ({ card, removeCard }: ICardComponentProps) => {
     <Container>
       <hr
         style={
-          card.option === "Entry"
+          card.option === "Entradas"
             ? { background: "#03B898" }
             : { background: "#E9ECEF" }
         }
       />
 
       <div>
-        <div className="divCardLeft">
+        <div>
           <h2>{card.description}</h2>
 
           <span>{card.option}</span>
         </div>
 
-        <div className="divCardRight">
-          <span>US$ {card.price}</span>
+        <div>
+          <span>R$ {card.price}</span>
 
           <button onClick={() => removeCard(card)}></button>
         </div>

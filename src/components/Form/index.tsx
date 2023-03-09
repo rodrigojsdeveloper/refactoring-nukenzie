@@ -1,18 +1,16 @@
+import { ButtonLink } from "../ButtonLink";
 import { useForm } from "react-hook-form";
 import { IForm } from "../../interfaces";
 import { Container } from "./style";
-import { Button } from "../Button";
 import { Input } from "../Input";
 import { useState } from "react";
 
 const Form = ({ addCard }: IForm) => {
-  const [option, setOption] = useState<string>("Entry");
+  const [option, setOption] = useState<string>("Entradas");
 
   const { register, handleSubmit } = useForm();
 
   const onSubmitFunc = (data: any) => {
-    option === "Entrada" ? setOption("Entry") : setOption("Expenses");
-
     const { description, price } = data;
 
     const newData = { description, price, option };
@@ -57,14 +55,14 @@ const Form = ({ addCard }: IForm) => {
             setOption(e.target.value)
           }
         >
-          <option>Entrada</option>
+          <option>Entradas</option>
           <option>Despesas</option>
         </select>
       </div>
 
-      <Button type="submit" size="l" color="home">
+      <ButtonLink href="submit" size="medium" color="pink">
         Inserir valor
-      </Button>
+      </ButtonLink>
     </Container>
   );
 };

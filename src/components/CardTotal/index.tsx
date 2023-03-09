@@ -7,24 +7,26 @@ const CardTotal = ({ cards }: ICardTotalComponentProps) => {
   ChartJS.register(ArcElement, Tooltip, Legend);
 
   const data = {
-    labels: ["Entrada", "Despesas"],
+    labels: ["Entradas", "Despesas"],
     datasets: [
       {
-        label: "# of Votes",
+        label: "Quantidade",
         data: [
           cards
-            .filter((card) => card.option === "Entry")
+            .filter((card) => card.option === "Entradas")
             .reduce(
               (valoAnterior, valorAtual) => valoAnterior + +valorAtual.price,
               0
             ),
 
           cards
-            .filter((card) => card.option === "Expenses")
+            .filter((card) => card.option === "Despesas")
             .reduce(
               (valoAnterior, valorAtual) => valoAnterior + +valorAtual.price,
               0
-            ),
+            )
+            .toString()
+            .split("")[1],
         ],
         backgroundColor: ["rgb(3, 184, 152)", "rgb(233, 236, 239)"],
         borderColor: ["rgb(3, 184, 152)", "rgb(233, 236, 239)"],

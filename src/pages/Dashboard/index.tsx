@@ -18,7 +18,7 @@ const Dashboard = () => {
   const addCard = (newCard: ICardProps) => {
     const copyNewCard = { ...newCard };
 
-    if (newCard.option === "Expenses") {
+    if (newCard.option === "Despesas") {
       +copyNewCard.price;
 
       copyNewCard.price = -copyNewCard.price;

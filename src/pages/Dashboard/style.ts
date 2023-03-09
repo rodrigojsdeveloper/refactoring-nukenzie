@@ -29,7 +29,7 @@ const Content = styled.div`
   margin-right: 30px;
 
   @media (max-width: 1024px) {
-    margin: 0;
+    margin: 0 auto;
   }
 `;
 

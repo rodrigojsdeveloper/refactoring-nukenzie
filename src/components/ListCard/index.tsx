@@ -1,7 +1,7 @@
 import { ICardProps, IListCardComponentProps } from "../../interfaces";
 import { List, ListHeader, ListBody } from "./style";
 import cardsVoids from "../../assets/NoCard.svg";
-import { Button } from "../Button";
+import { ButtonLink } from "../ButtonLink";
 
 const ListCard = ({
   cards,
@@ -11,34 +11,38 @@ const ListCard = ({
   return (
     <List>
       <ListHeader>
-        <h2>Financial Summary</h2>
+        <h2>Resumo financeiro</h2>
 
         <nav>
-          <Button size="s" color="dashboard" onClick={() => setFilterCards([])}>
-            All
-          </Button>
-          <Button
-            size="s"
-            color="dashboard"
+          <ButtonLink
+            size="small"
+            color="gray"
+            onClick={() => setFilterCards([])}
+          >
+            Todos
+          </ButtonLink>
+          <ButtonLink
+            size="small"
+            color="gray"
             onClick={() =>
               setFilterCards(
-                cards.filter((card: ICardProps) => card.option === "Entry")
+                cards.filter((card: ICardProps) => card.option === "Entradas")
               )
             }
           >
-            Entry
-          </Button>
-          <Button
-            size="s"
-            color="dashboard"
+            Entradas
+          </ButtonLink>
+          <ButtonLink
+            size="small"
+            color="gray"
             onClick={() =>
               setFilterCards(
-                cards.filter((card: ICardProps) => card.option === "Expenses")
+                cards.filter((card: ICardProps) => card.option === "Despesas")
               )
             }
           >
-            Expenses
-          </Button>
+            Despesas
+          </ButtonLink>
         </nav>
       </ListHeader>
 
@@ -47,9 +51,9 @@ const ListCard = ({
           <menu>{children}</menu>
         ) : (
           <>
-            <h2>You don't have any releases yet.</h2>
+            <h2>Você ainda não tem nenhum lançamento.</h2>
 
-            <img src={cardsVoids} alt="Cards voids" />
+            <img src={cardsVoids} alt="cartões vazios" />
           </>
         )}
       </ListBody>

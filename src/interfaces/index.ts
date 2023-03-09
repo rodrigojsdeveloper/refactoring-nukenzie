@@ -1,5 +1,4 @@
 import { FieldValues, UseFormRegister } from "react-hook-form";
-import { MouseEventHandler } from "react";
 
 export interface ICardProps {
   description: string;
@@ -9,16 +8,15 @@ export interface ICardProps {
 
 export interface IButtonProps {
   children: React.ReactNode;
-  onClick?: MouseEventHandler;
-  disabled?: boolean | undefined;
-  type?: "button" | "submit" | "reset" | undefined;
-  size: "l" | "m" | "s";
-  color: "home" | "dashboard";
+  size: "small" | "medium";
+  color: "pink" | "gray";
+  href?: string;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
-export interface IButtonStyledProps {
-  size: string;
-  color: string;
+export interface IButtonLinkStyledProps {
+  size: "small" | "medium";
+  color: "pink" | "gray";
 }
 
 export interface ICardComponentProps {

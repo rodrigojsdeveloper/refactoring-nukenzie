@@ -1,5 +1,5 @@
 import title from "../../assets/Nu Kenzie-black.svg";
-import { Link } from "react-router-dom";
+import { ButtonLink } from "../ButtonLink";
 import { Container } from "./style";
 
 const Header = () => {
@@ -8,7 +8,9 @@ const Header = () => {
       <div>
         <img src={title} alt="Nu Kenzie" />
 
-        <Link to="/">Voltar</Link>
+        <ButtonLink href="/" size="small" color="gray">
+          Voltar
+        </ButtonLink>
       </div>
     </Container>
   );

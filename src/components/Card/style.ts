@@ -17,20 +17,13 @@ const Container = styled.div`
   flex-direction: row;
 
   border-radius: 4px;
-  background: var(--background-header-dashboard);
+  background-color: var(--background-header-dashboard);
 
   opacity: 0;
   transform: translate(-100px);
-
-  margin-bottom: 35px;
   animation: ${cardAnimation} 0.5s ease forwards;
 
-  &:hover {
-    background: var(--white);
-    box-shadow: 0px 4px 42px -12px var(--color-box-shadow);
-
-    transition: 0.75s;
-  }
+  margin-bottom: 25px;
 
   & > hr {
     width: 4px;
@@ -39,102 +32,88 @@ const Container = styled.div`
   }
 
   & > div {
-    display: flex;
-    justify-content: space-between;
-    max-width: 535px;
     width: 100%;
+    max-width: 535px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
     padding: 5px 10px 0 10px;
 
-    flex-direction: row;
-  }
-
-  & > div > div {
-    display: flex;
-  }
-
-  .divCardLeft {
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    color: var(--background-home);
-
-    & h2 {
-      max-width: 285px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-  }
-
-  .divCardLeft > span {
-    font-size: 12px;
-    color: var(--color-price-card);
-    margin-bottom: 10px;
-  }
-
-  .divCardRight {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .divCardRight > span {
-    font-size: 12px;
-
-    margin-right: 120px;
-  }
-
-  .divCardRight > button {
-    width: 22px;
-    height: 22px;
-    cursor: pointer;
-    background: var(--background-button-dashboard);
-    background: url(${lixeira});
-
-    transition: 1s;
-
-    font-size: 12px;
-  }
-
-  .divCardRight > button:hover {
-    background: url(${lixeira_hover});
-    .divCardRight > span {
-      margin-right: 20px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    & > div {
+    & > div:nth-child(1) {
+      display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
 
-      .divCardLeft,
-      .divCardRight {
-        flex-direction: column;
+      padding: 10px 0;
 
-        span {
-          margin-bottom: 0;
+      & h2 {
+        font-size: 16px;
+        color: var(--background-home);
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      & > span {
+        font-size: 12px;
+        color: var(--color-price-card);
+      }
+    }
+
+    & > div:nth-child(2) {
+      width: 100%;
+      max-width: 200px;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      & > span {
+        font-weight: 600;
+        font-size: 12px;
+      }
+
+      & > button {
+        width: 22px;
+        height: 22px;
+
+        cursor: pointer;
+        background: url(${lixeira});
+        background-color: var(--background-button-dashboard);
+
+        transition: 1s;
+
+        &:hover {
+          background: url(${lixeira_hover});
         }
+      }
 
-        h2,
-        span,
-        button {
-          padding: 0;
-          margin-top: 10px;
-        }
-
-        button {
-          margin-bottom: 15px;
-        }
+      .divCardRight > span {
+        margin-right: 20px;
       }
     }
   }
 
-  @media (max-width: 320px) {
-    .divCardLeft {
-      & > h2 {
-        white-space: unset;
-        max-width: unset;
-        font-size: 14px;
+  @media (max-width: 425px) {
+    & > div {
+      flex-direction: column;
+
+      & > div:nth-child(2) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        padding-bottom: 10px;
+
+        & > span {
+          padding-bottom: 10px;
+        }
       }
     }
   }

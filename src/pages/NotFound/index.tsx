@@ -1,5 +1,5 @@
+import { ButtonLink } from "../../components/ButtonLink";
 import notFound from "../../assets/notFound.svg";
-import { Link } from "react-router-dom";
 import { Container } from "./style";
 
 const NotFound = () => {
@@ -13,7 +13,9 @@ const NotFound = () => {
           <b>vamos tentar novamente</b>.
         </p>
 
-        <Link to="/">Ir para home</Link>
+        <ButtonLink href="/" size="medium" color="pink">
+          Ir para home
+        </ButtonLink>
       </div>
 
       <img src={notFound} alt="error" />

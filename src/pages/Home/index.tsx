@@ -1,6 +1,6 @@
+import { ButtonLink } from "../../components/ButtonLink";
 import logo from "../../assets/Illustration.svg";
 import title from "../../assets/Nu Kenzie.svg";
-import { Link } from "react-router-dom";
 import { Container } from "./style";
 
 const Home = () => {
@@ -14,10 +14,12 @@ const Home = () => {
 
           <p>com rapidez e segurança</p>
 
-          <Link to="/dashboard">Começar</Link>
+          <ButtonLink href="/dashboard" size="medium" color="pink">
+            Começar
+          </ButtonLink>
         </div>
 
-        <img src={logo} alt="Ilustração" />
+        <img src={logo} alt="ilustração" />
       </div>
     </Container>
   );
