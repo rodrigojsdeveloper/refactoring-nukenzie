@@ -1,4 +1,3 @@
-import { ButtonLink } from "../ButtonLink";
 import { useForm } from "react-hook-form";
 import { IForm } from "../../interfaces";
 import { Container } from "./style";
@@ -22,28 +21,22 @@ const Form = ({ addCard }: IForm) => {
     <Container onSubmit={handleSubmit(onSubmitFunc)}>
       <div>
         <Input
-          sizeInput="m"
           type="text"
           name="description"
-          autoComplete="off"
           placeholder="Digite aqui sua descrição"
           register={register}
           label="Descrição"
-          required={true}
         />
 
         <span>Ex: Compra de roupas</span>
       </div>
 
       <Input
-        sizeInput="s"
         type="number"
         name="price"
-        autoComplete="off"
         placeholder="1"
         register={register}
         label="Valor (R$)"
-        required={true}
       />
 
       <div>

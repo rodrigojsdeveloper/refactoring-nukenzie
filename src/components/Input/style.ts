@@ -1,49 +1,34 @@
-import { InputStyledProps } from "../../interfaces";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const Container = styled.div`
-  text-align: left;
-
-  div {
-    padding: 10px 0 5px 0;
+  & > label {
     font-size: 12px;
     color: var(--grey-4);
-  }
-`;
 
-const InputContainer = styled.input<InputStyledProps>`
-  border: 1px solid var(--grey-7);
-  border-radius: 4px;
-  padding: 0 16px;
-  gap: 10px;
-
-  width: 100%;
-
-  &:focus {
-    border: 2px solid var(--grey-4);
+    text-align: left;
   }
 
-  &:focus::-webkit-input-placeholder {
-    color: transparent;
-  }
+  & > input {
+    width: 100%;
+    height: 52.8px;
 
-  ${({ sizeInput }) => {
-    switch (sizeInput) {
-      case "m":
-        return css`
-          height: 52.8px;
-          max-width: 314px;
-        `;
+    gap: 10px;
+    padding: 0 16px;
 
-      case "s":
-        return css`
-          height: 48px;
-        `;
+    border-radius: 4px;
+    border: 1px solid var(--grey-7);
+    background-color: var(--color-white);
 
-      default:
-        return false;
+    margin: 10px 0 5px 0;
+
+    &:focus {
+      border: 2px solid var(--grey-4);
     }
-  }}
+
+    &:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+  }
 `;
 
-export { Container, InputContainer };
+export { Container };

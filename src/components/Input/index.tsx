@@ -1,30 +1,17 @@
-import { Container, InputContainer } from "./style";
 import { InputProps } from "../../interfaces";
+import { Container } from "./style";
 
-const Input = ({
-  label,
-  register,
-  name,
-  error,
-  sizeInput,
-  autoComplete,
-  placeholder,
-  type,
-  required,
-}: InputProps) => {
+const Input = ({ label, register, name, placeholder, type }: InputProps) => {
   return (
     <Container>
-      <div>
-        {label} {!!error && <span> - {error}</span>}
-      </div>
+      <label>{label}</label>
 
-      <InputContainer
-        sizeInput={sizeInput}
+      <input
         {...register(name)}
-        autoComplete={autoComplete}
+        autoComplete="off"
         placeholder={placeholder}
         type={type}
-        required={required}
+        required={true}
       />
     </Container>
   );

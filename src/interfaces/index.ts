@@ -35,19 +35,11 @@ export interface IListCardComponentProps {
 }
 
 export interface InputProps {
-  sizeInput: "m" | "s";
-  type?: string;
+  type: string;
   name: string;
-  autoComplete?: string;
-  placeholder?: string;
+  placeholder: string;
   register: UseFormRegister<FieldValues>;
-  label?: string;
-  error?: any;
-  required: boolean | undefined;
-}
-
-export interface InputStyledProps {
-  sizeInput: string;
+  label: string;
 }
 
 export interface IForm {

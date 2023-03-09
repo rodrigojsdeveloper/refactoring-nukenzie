@@ -10,7 +10,7 @@ const CardTotal = ({ cards }: ICardTotalComponentProps) => {
     labels: ["Entradas", "Despesas"],
     datasets: [
       {
-        label: "Quantidade",
+        label: "Valor",
         data: [
           cards
             .filter((card) => card.option === "Entradas")

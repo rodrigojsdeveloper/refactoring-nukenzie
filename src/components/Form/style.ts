@@ -49,14 +49,13 @@ const Container = styled.form`
       cursor: pointer;
 
       &:focus {
-        outline: none;
+        border: 2px solid var(--grey-4);
       }
     }
   }
 
   & > button {
     width: 100%;
-    max-width: 314px;
     height: 48px;
 
     font-weight: 500;
