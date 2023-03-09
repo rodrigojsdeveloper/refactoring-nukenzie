@@ -60,9 +60,7 @@ const Form = ({ addCard }: IForm) => {
         </select>
       </div>
 
-      <ButtonLink href="submit" size="medium" color="pink">
-        Inserir valor
-      </ButtonLink>
+      <button type="submit">Inserir valor</button>
     </Container>
   );
 };

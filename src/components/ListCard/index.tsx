@@ -1,7 +1,6 @@
 import { ICardProps, IListCardComponentProps } from "../../interfaces";
-import { List, ListHeader, ListBody } from "./style";
 import cardsVoids from "../../assets/NoCard.svg";
-import { ButtonLink } from "../ButtonLink";
+import { Container } from "./style";
 
 const ListCard = ({
   cards,
@@ -9,21 +8,16 @@ const ListCard = ({
   children,
 }: IListCardComponentProps) => {
   return (
-    <List>
-      <ListHeader>
+    <Container>
+      <div>
         <h2>Resumo financeiro</h2>
 
-        <nav>
-          <ButtonLink
-            size="small"
-            color="gray"
-            onClick={() => setFilterCards([])}
-          >
+        <div>
+          <button type="button" onClick={() => setFilterCards([])}>
             Todos
-          </ButtonLink>
-          <ButtonLink
-            size="small"
-            color="gray"
+          </button>
+          <button
+            type="button"
             onClick={() =>
               setFilterCards(
                 cards.filter((card: ICardProps) => card.option === "Entradas")
@@ -31,10 +25,9 @@ const ListCard = ({
             }
           >
             Entradas
-          </ButtonLink>
-          <ButtonLink
-            size="small"
-            color="gray"
+          </button>
+          <button
+            type="button"
             onClick={() =>
               setFilterCards(
                 cards.filter((card: ICardProps) => card.option === "Despesas")
@@ -42,11 +35,11 @@ const ListCard = ({
             }
           >
             Despesas
-          </ButtonLink>
-        </nav>
-      </ListHeader>
+          </button>
+        </div>
+      </div>
 
-      <ListBody>
+      <div>
         {cards.length > 0 ? (
           <menu>{children}</menu>
         ) : (
@@ -56,8 +49,8 @@ const ListCard = ({
             <img src={cardsVoids} alt="cartões vazios" />
           </>
         )}
-      </ListBody>
-    </List>
+      </div>
+    </Container>
   );
 };
 

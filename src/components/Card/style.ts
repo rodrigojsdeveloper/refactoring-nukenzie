@@ -57,6 +57,8 @@ const Container = styled.div`
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        
+        padding-bottom: 35px;
       }
 
       & > span {

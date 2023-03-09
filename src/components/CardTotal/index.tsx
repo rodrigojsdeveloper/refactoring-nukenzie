@@ -24,9 +24,7 @@ const CardTotal = ({ cards }: ICardTotalComponentProps) => {
             .reduce(
               (valoAnterior, valorAtual) => valoAnterior + +valorAtual.price,
               0
-            )
-            .toString()
-            .split("")[1],
+            ),
         ],
         backgroundColor: ["rgb(3, 184, 152)", "rgb(233, 236, 239)"],
         borderColor: ["rgb(3, 184, 152)", "rgb(233, 236, 239)"],

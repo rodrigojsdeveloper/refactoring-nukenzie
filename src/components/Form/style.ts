@@ -53,6 +53,37 @@ const Container = styled.form`
       }
     }
   }
+
+  & > button {
+    width: 100%;
+    max-width: 314px;
+    height: 48px;
+
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--white);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    padding: 15px;
+
+    border-radius: 4px;
+    background-color: var(--background-button-home);
+    border: 1px solid var(--background-button-home);
+    box-shadow: var(--box-shadow-button-dashboard) 0 1px 0 0 inset;
+
+    white-space: nowrap;
+    vertical-align: baseline;
+    touch-action: manipulation;
+
+    &:hover {
+      background-color: var(--background-button-home-hover);
+    }
+  }
 `;
 
 export { Container };
