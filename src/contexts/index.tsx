@@ -1,10 +1,7 @@
 import { ProductContextProvider } from "./ProductContext";
+import { IListCardComponentProps } from "../interfaces";
 
-type Providers = {
-  children: React.ReactNode;
-};
-
-const Providers = ({ children }: Providers) => {
+const Providers = ({ children }: IListCardComponentProps) => {
   return <ProductContextProvider>{children}</ProductContextProvider>;
 };
 

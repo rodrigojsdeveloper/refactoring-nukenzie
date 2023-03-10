@@ -46,7 +46,3 @@ export interface IProductContextData {
   removeCard: (card: ICardProps) => void;
   setFilterCards: any;
 }
-
-export interface IProductContextProvider {
-  children: React.ReactNode;
-}

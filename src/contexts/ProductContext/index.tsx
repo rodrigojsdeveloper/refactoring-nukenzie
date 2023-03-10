@@ -3,14 +3,14 @@ import { createContext } from "react";
 import {
   ICardProps,
   IProductContextData,
-  IProductContextProvider,
+  IListCardComponentProps,
 } from "../../interfaces";
 
 export const ProductContext = createContext({} as IProductContextData);
 
 export const ProductContextProvider = ({
   children,
-}: IProductContextProvider) => {
+}: IListCardComponentProps) => {
   const [cards, setCards] = useLocalStorage("Nu Kenzie: cards", []);
 
   const [filterCards, setFilterCards] = useLocalStorage(
