@@ -21,7 +21,6 @@ export interface IButtonLinkStyledProps {
 
 export interface ICardComponentProps {
   card: ICardProps;
-  removeCard: (card: ICardProps) => void;
 }
 
 export interface ICardTotalComponentProps {
@@ -29,8 +28,6 @@ export interface ICardTotalComponentProps {
 }
 
 export interface IListCardComponentProps {
-  cards: ICardProps[];
-  setFilterCards: any;
   children: React.ReactNode;
 }
 
@@ -42,6 +39,14 @@ export interface InputProps {
   label: string;
 }
 
-export interface IForm {
+export interface IProductContextData {
+  cards: any;
+  filterCards: any;
   addCard: (newCard: ICardProps) => void;
+  removeCard: (card: ICardProps) => void;
+  setFilterCards: any;
+}
+
+export interface IProductContextProvider {
+  children: React.ReactNode;
 }

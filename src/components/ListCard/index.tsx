@@ -1,12 +1,12 @@
 import { ICardProps, IListCardComponentProps } from "../../interfaces";
+import { ProductContext } from "../../contexts/ProductContext";
 import cardsVoids from "../../assets/NoCard.svg";
 import { Container } from "./style";
+import { useContext } from "react";
 
-const ListCard = ({
-  cards,
-  setFilterCards,
-  children,
-}: IListCardComponentProps) => {
+const ListCard = ({ children }: IListCardComponentProps) => {
+  const { cards, setFilterCards } = useContext(ProductContext);
+
   return (
     <Container>
       <div>

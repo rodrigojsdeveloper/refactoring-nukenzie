@@ -1,10 +1,12 @@
+import { ProductContext } from "../../contexts/ProductContext";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { IForm } from "../../interfaces";
 import { Container } from "./style";
 import { Input } from "../Input";
-import { useState } from "react";
 
-const Form = ({ addCard }: IForm) => {
+const Form = () => {
+  const { addCard } = useContext(ProductContext);
+
   const [option, setOption] = useState<string>("Entradas");
 
   const { register, handleSubmit } = useForm();
