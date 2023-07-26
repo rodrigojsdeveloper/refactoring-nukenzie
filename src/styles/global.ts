@@ -5,8 +5,10 @@ export default createGlobalStyle`
 		margin: 0;
 		border: 0;
 		padding: 0;
+		outline: 0;
 		box-sizing: border-box;
-		font-family: "Nunito", sans-serif;
+		font-family: 'Nunito', sans-serif;
+		scroll-behavior: smooth;
 	}
 
 	:root {
@@ -36,13 +38,8 @@ export default createGlobalStyle`
 		background-color: var(--color-white);
 	}
 
-	input {
-		outline: none;
-	}
-
-	button {
+	button, a {
 		cursor: pointer;
-		transition: .5s;
 	}
 
 	a {

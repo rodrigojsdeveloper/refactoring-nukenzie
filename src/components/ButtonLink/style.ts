@@ -53,8 +53,6 @@ const Container = styled.a<IButtonLinkStyledProps>`
 
           &:hover {
             box-shadow: none;
-            border-color: var(--color-primary-2);
-            background-color: var(--color-primary-2);
           }
         `;
 

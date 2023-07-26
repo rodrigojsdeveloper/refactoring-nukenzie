@@ -79,8 +79,10 @@ const Container = styled.form`
     vertical-align: baseline;
     touch-action: manipulation;
 
+    transition: 0.5s;
+
     &:hover {
-      background-color: var(--color-primary-2);
+      box-shadow: none;
     }
   }
 `;
