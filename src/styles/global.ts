@@ -15,13 +15,13 @@ export default createGlobalStyle`
 		--color-primary: #FD377E;
 		--color-primary-2: #E34981;
 		
-		--grey-7: #DCDCDC;
-		--grey-6: #343A40;
-		--grey-5: #F0F0F1;
-		--grey-4: #212529;
-		--grey-3: #868E96;
-		--grey-2: #E9ECEF;
 		--grey-1: #F8F9FA;
+		--grey-2: #E9ECEF;
+		--grey-3: #868E96;
+		--grey-4: #212529;
+		--grey-5: #F0F0F1;
+		--grey-6: #343A40;
+		--grey-7: #DCDCDC;
 		
 		--color-white: #FFFFFF;
 
@@ -31,6 +31,8 @@ export default createGlobalStyle`
 		--shadow-4: rgba(0, 0, 0, 0.25);
 		--shadow-5: rgba(0, 0, 0, 0.85);
 		--shadow-6: rgba(255, 255, 255, .7);
+
+		--border-radius: 0px;
 	}
 
 	body {
@@ -38,7 +40,7 @@ export default createGlobalStyle`
 		background-color: var(--color-white);
 	}
 
-	button, a {
+	button, a, select {
 		cursor: pointer;
 	}
 

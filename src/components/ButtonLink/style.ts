@@ -15,11 +15,8 @@ const Container = styled.a<IButtonLinkStyledProps>`
   gap: 10px;
   padding: 15px;
 
-  border-radius: 4px;
-  vertical-align: baseline;
-  touch-action: manipulation;
-
   transition: 0.5s;
+  border-radius: var(--border-radius);
 
   ${({ size }) => {
     switch (size) {
@@ -60,16 +57,7 @@ const Container = styled.a<IButtonLinkStyledProps>`
         return css`
           color: var(--shadow-5);
           background-color: var(--color-white);
-          border: 1px solid var(--shadow);
-          box-shadow: var(--shadow-2) 0 1px 3px 0;
-
-          transition: all 250ms;
-
-          &:hover {
-            transform: translateY(-1px);
-            box-shadow: var(--shadow) 0 4px 12px;
-            border-color: var(--shadow-3);
-          }
+          border: 1.5px solid var(--shadow);
         `;
 
       default:

@@ -8,8 +8,8 @@ const Container = styled.form`
   flex-direction: column;
   justify-content: center;
 
-  border-radius: 4px;
   border: 1px solid var(--grey-7);
+  border-radius: var(--border-radius);
 
   gap: 10px;
   padding: 30px 20px;
@@ -41,12 +41,18 @@ const Container = styled.form`
       width: 100%;
       height: 48px;
 
-      border-radius: 4px;
-      background-color: var(--color-white);
+      color: var(--grey-3);
       border: 1px solid var(--grey-7);
+      border-radius: var(--border-radius);
+      background-color: var(--color-white);
 
       padding: 0 10px;
-      cursor: pointer;
+
+      appearance: none;
+      background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.127L12 18.127L20 10.127H4Z" fill="%23868E96"/></svg>');
+      background-repeat: no-repeat;
+      background-position: 0;
+      background-position-x: 97%;
 
       &:focus {
         border: 2px solid var(--grey-4);
@@ -70,7 +76,7 @@ const Container = styled.form`
     gap: 10px;
     padding: 15px;
 
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     background-color: var(--color-primary);
     border: 1px solid var(--color-primary);
     box-shadow: var(--shadow-6) 0 1px 0 0 inset;

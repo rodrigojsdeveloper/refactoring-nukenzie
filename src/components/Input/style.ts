@@ -10,13 +10,13 @@ const Container = styled.div`
 
   & > input {
     width: 100%;
-    height: 52.8px;
+    height: 48px;
 
     gap: 10px;
     padding: 0 16px;
 
-    border-radius: 4px;
     border: 1px solid var(--grey-7);
+    border-radius: var(--border-radius);
     background-color: var(--color-white);
 
     margin: 10px 0 5px 0;
@@ -27,6 +27,10 @@ const Container = styled.div`
 
     &:focus::-webkit-input-placeholder {
       color: transparent;
+    }
+
+    &::placeholder {
+      color: var(--grey-3);
     }
   }
 `;

@@ -16,8 +16,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
 
-  border-radius: 4px;
   background-color: var(--grey-1);
+  border-radius: var(--border-radius);
 
   opacity: 0;
   transform: translate(-100px);
@@ -28,7 +28,7 @@ const Container = styled.div`
   & > hr {
     width: 4px;
     border: none;
-    border-radius: 4px 0px 0px 4px;
+    border-radius: var(--border-radius) 0px 0px var(--border-radius);
   }
 
   & > div {
@@ -85,7 +85,6 @@ const Container = styled.div`
         width: 22px;
         height: 22px;
 
-        cursor: pointer;
         background: url(${lixeira});
         background-color: var(--grey-5);
 

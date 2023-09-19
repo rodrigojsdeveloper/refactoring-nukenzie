@@ -8,9 +8,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  border-radius: 4px;
-  background-color: var(--color-white);
   border: 1px solid var(--grey-7);
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
 
   padding: 10px;
   margin-top: 15px;

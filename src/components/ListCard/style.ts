@@ -23,40 +23,25 @@ const Container = styled.div`
       flex-direction: row;
 
       & > button {
-        margin: 0 5px;
-
         width: 100%;
         height: 45px;
 
-        font-weight: 500;
-        font-size: 16px;
-        color: var(--shadow-5);
-
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
 
-        gap: 10px;
-        padding: 15px;
-
-        border-radius: 4px;
-        background-color: var(--color-white);
         border: 1px solid var(--shadow);
-        box-shadow: var(--shadow-2) 0 1px 3px 0;
+        border-radius: var(--border-radius);
+        background-color: var(--color-white);
 
-        transition: all 250ms;
-        vertical-align: baseline;
-        touch-action: manipulation;
+        font-size: 16px;
+        color: var(--shadow-5);
 
-        &:hover {
-          transform: translateY(-1px);
-          box-shadow: var(--shadow) 0 4px 12px;
-          border-color: var(--shadow-3);
-        }
+        padding: 15px;
+        margin: 0 5px;
       }
 
-      @media (max-width: 320px) {
+      @media (max-width: 425px) {
         width: 100%;
         flex-direction: column;
 
