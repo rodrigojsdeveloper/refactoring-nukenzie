@@ -47,10 +47,6 @@ export default createGlobalStyle`
 	a {
 		text-decoration: none;
 	}
-	
-	&::-webkit-scrollbar {
-		display: none;
-	}
 
 	input::-webkit-outer-spin-button,
 	input::-webkit-inner-spin-button {
@@ -60,5 +56,18 @@ export default createGlobalStyle`
 
 	input[type=number] {
 		-moz-appearance:textfield;
+	}
+	
+	::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: var(--color-white);
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 0.5px;
+		background-color: var(--grey-3);
 	}
 `;
