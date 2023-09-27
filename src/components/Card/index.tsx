@@ -16,14 +16,14 @@ const Card = ({ card }: ICardComponentProps) => {
         }
       />
 
-      <div>
-        <div>
+      <div className="card-description">
+        <div className="card-content">
           <h2>{card.description}</h2>
 
           <span>{card.option}</span>
         </div>
 
-        <div>
+        <div className="card-actions">
           <span>R$ {card.price}</span>
 
           <button onClick={() => removeCard(card)}></button>

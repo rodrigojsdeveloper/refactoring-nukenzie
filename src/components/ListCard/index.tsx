@@ -1,50 +1,98 @@
 import { ICardProps, IListCardComponentProps } from "../../interfaces";
 import { ProductContext } from "../../contexts/ProductContext";
 import cardsVoids from "../../assets/NoCard.svg";
+import { useContext, useState } from "react";
 import { Container } from "./style";
-import { useContext } from "react";
 
 const ListCard = ({ children }: IListCardComponentProps) => {
   const { cards, setFilterCards } = useContext(ProductContext);
 
+  const [activeButton, setActiveButton] = useState("Todos");
+
+  const handleButtonClick = (filterOption: string) => {
+    setActiveButton(filterOption);
+
+    if (filterOption === "Todos") {
+      setFilterCards([]);
+    } else {
+      setFilterCards(
+        cards.filter((card: ICardProps) => card.option === filterOption)
+      );
+    }
+  };
+
+  const cardsLength = cards.length < 1;
+
   return (
     <Container>
-      <div>
+      <div className="list-container">
         <h2>Resumo financeiro</h2>
 
-        <div>
-          <button type="button" onClick={() => setFilterCards([])}>
+        <div className="list-nav">
+          <button
+            type="button"
+            onClick={() => handleButtonClick("Todos")}
+            style={{
+              backgroundColor:
+                activeButton === "Todos" && !cardsLength
+                  ? "var(--color-primary)"
+                  : "",
+              color:
+                activeButton === "Todos" && !cardsLength
+                  ? "var(--color-white)"
+                  : "",
+              borderColor:
+                activeButton === "Todos" && !cardsLength
+                  ? "var(--color-primary)"
+                  : "",
+            }}
+          >
             Todos
           </button>
           <button
             type="button"
-            onClick={() =>
-              setFilterCards(
-                cards.filter((card: ICardProps) => card.option === "Entradas")
-              )
-            }
+            onClick={() => handleButtonClick("Entradas")}
+            style={{
+              backgroundColor:
+                activeButton === "Entradas" && !cardsLength
+                  ? "var(--color-primary)"
+                  : "",
+              color:
+                activeButton === "Entradas" && !cardsLength
+                  ? "var(--color-white)"
+                  : "",
+              borderColor:
+                activeButton === "Entradas" && !cardsLength
+                  ? "var(--color-primary)"
+                  : "",
+            }}
           >
             Entradas
           </button>
           <button
             type="button"
-            onClick={() =>
-              setFilterCards(
-                cards.filter((card: ICardProps) => card.option === "Despesas")
-              )
-            }
+            onClick={() => handleButtonClick("Despesas")}
+            style={{
+              backgroundColor:
+                activeButton === "Despesas" && !cardsLength
+                  ? "var(--color-primary)"
+                  : "",
+              color: activeButton === "Despesas" ? "var(--color-white)" : "",
+              borderColor:
+                activeButton === "Despesas" ? "var(--color-primary)" : "",
+            }}
           >
             Despesas
           </button>
         </div>
       </div>
 
-      <div>
+      <div className="list-menu">
         {cards.length > 0 ? (
           <menu>{children}</menu>
         ) : (
           <>
-            <h2>Você ainda não tem nenhum lançamento.</h2>
+            <p>Você ainda não tem nenhum lançamento.</p>
 
             <img src={cardsVoids} alt="cartões vazios" />
           </>

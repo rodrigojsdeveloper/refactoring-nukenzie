@@ -5,7 +5,7 @@ const Container = styled.div`
   max-width: 560px;
   padding: 5px;
 
-  & > div:nth-child(1) {
+  & > .list-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,7 +18,7 @@ const Container = styled.div`
       color: var(--grey-4);
     }
 
-    & > div {
+    & > .list-nav {
       display: flex;
       flex-direction: row;
 
@@ -40,33 +40,12 @@ const Container = styled.div`
         padding: 15px;
         margin: 0 5px;
       }
-
-      @media (max-width: 425px) {
-        width: 100%;
-        flex-direction: column;
-
-        & > button {
-          margin: 5px 0;
-        }
-      }
-    }
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-
-      & > h2 {
-        padding-bottom: 15px;
-      }
     }
   }
 
-  & > div:nth-child(2) {
-    & > h2 {
+  & > .list-menu {
+    & > p {
       padding-bottom: 35px;
-
-      @media (max-width: 768px) {
-        text-align: center;
-      }
     }
 
     & > img {
@@ -83,6 +62,33 @@ const Container = styled.div`
 
   @media (max-width: 1024px) {
     margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .list-nav {
+      flex-direction: column;
+
+      & > h2 {
+        padding-bottom: 15px;
+      }
+    }
+
+    .list-menu {
+      & > p {
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    .list-nav {
+      width: 100%;
+      flex-direction: column;
+
+      & > button {
+        margin: 5px 0;
+      }
+    }
   }
 `;
 

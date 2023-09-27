@@ -14,7 +14,7 @@ const Container = styled.form`
   gap: 10px;
   padding: 30px 20px;
 
-  & > div:nth-child(1) {
+  & > .description-input {
     & > span {
       color: var(--grey-3);
       font-size: 12px;
@@ -22,7 +22,7 @@ const Container = styled.form`
     }
   }
 
-  & > div:nth-child(3) {
+  & > .value-type {
     width: 100%;
 
     display: flex;
@@ -56,6 +56,7 @@ const Container = styled.form`
 
       &:focus {
         border: 2px solid var(--grey-4);
+        background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 15.873L12 7.873L20 15.873H4Z" fill="%23868E96"/></svg>');
       }
     }
   }

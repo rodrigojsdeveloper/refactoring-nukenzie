@@ -11,7 +11,7 @@ const cardAnimation = keyframes`
 
 const Container = styled.div`
   width: 100%;
-  max-width: 560px;
+  max-width: 540px;
 
   display: flex;
   flex-direction: row;
@@ -31,7 +31,7 @@ const Container = styled.div`
     border-radius: var(--border-radius) 0px 0px var(--border-radius);
   }
 
-  & > div {
+  & > .card-description {
     width: 100%;
     max-width: 535px;
 
@@ -42,7 +42,7 @@ const Container = styled.div`
 
     padding: 5px 10px 0 10px;
 
-    & > div:nth-child(1) {
+    & > .card-content {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -67,7 +67,7 @@ const Container = styled.div`
       }
     }
 
-    & > div:nth-child(2) {
+    & > .card-actions {
       width: 100%;
       max-width: 200px;
 
@@ -99,13 +99,11 @@ const Container = styled.div`
         margin-right: 20px;
       }
     }
-  }
 
-  @media (max-width: 425px) {
-    & > div {
+    @media (max-width: 425px) {
       flex-direction: column;
 
-      & > div:nth-child(2) {
+      & > .card-actions {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;

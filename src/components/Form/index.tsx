@@ -7,9 +7,9 @@ import { Input } from "../Input";
 const Form = () => {
   const { addCard } = useContext(ProductContext);
 
-  const [option, setOption] = useState<string>("Entradas");
+  const [option, setOption] = useState<string>("");
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmitFunc = (data: any) => {
     const { description, price } = data;
@@ -17,11 +17,12 @@ const Form = () => {
     const newData = { description, price, option };
 
     addCard(newData);
+    reset();
   };
 
   return (
     <Container onSubmit={handleSubmit(onSubmitFunc)}>
-      <div>
+      <div className="description-input">
         <Input
           type="text"
           name="description"
@@ -41,17 +42,22 @@ const Form = () => {
         label="Valor (R$)"
       />
 
-      <div>
+      <div className="value-type">
         <label>Tipo de valor</label>
 
         <select
           name="options"
+          required={true}
           onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
             setOption(e.target.value)
           }
+          defaultValue=""
         >
-          <option>Entradas</option>
-          <option>Despesas</option>
+          <option value="" disabled>
+            Selecione o tipo
+          </option>
+          <option value="Entradas">Entradas</option>
+          <option value="Despesas">Despesas</option>
         </select>
       </div>
 
