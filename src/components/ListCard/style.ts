@@ -18,7 +18,7 @@ const Container = styled.div`
       color: var(--grey-4);
     }
 
-    & > .list-nav {
+    .list-nav {
       display: flex;
       flex-direction: row;
 
@@ -39,6 +39,15 @@ const Container = styled.div`
 
         padding: 15px;
         margin: 0 5px;
+      }
+
+      @media (max-width: 332px) {
+        width: 100%;
+        flex-direction: column;
+
+        & > button {
+          margin: 5px 0;
+        }
       }
     }
   }
@@ -65,7 +74,7 @@ const Container = styled.div`
   }
 
   @media (max-width: 768px) {
-    .list-nav {
+    .list-container {
       flex-direction: column;
 
       & > h2 {
@@ -76,17 +85,6 @@ const Container = styled.div`
     .list-menu {
       & > p {
         text-align: center;
-      }
-    }
-  }
-
-  @media (max-width: 425px) {
-    .list-nav {
-      width: 100%;
-      flex-direction: column;
-
-      & > button {
-        margin: 5px 0;
       }
     }
   }

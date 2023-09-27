@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
-  max-width: 1440px;
+  max-width: 1024px;
   min-height: 100vh;
 
   display: flex;
@@ -34,11 +34,13 @@ const Container = styled.div`
     justify-content: flex-start;
 
     & > img {
-      padding-top: 50px;
+      margin-top: 50px;
     }
   }
 
   @media (max-width: 440px) {
+    padding: 20px;
+
     & > img {
       width: 100%;
     }
