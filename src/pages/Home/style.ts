@@ -11,7 +11,7 @@ const Container = styled.div`
   padding: 20px;
 
   color: var(--color-white);
-  background-color: var(--grey-4);
+  background-color: var(--grey-9);
 
   & > div {
     width: 100%;

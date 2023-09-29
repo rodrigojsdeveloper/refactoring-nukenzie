@@ -1,8 +1,8 @@
 import { ProductContext } from "../../contexts/ProductContext";
 import { CardTotal } from "../../components/CardTotal";
-import { ListCard } from "../../components/ListCard";
 import { Header } from "../../components/Header";
 import { ICardProps } from "../../interfaces";
+import { List } from "../../components/List";
 import { Card } from "../../components/Card";
 import { Form } from "../../components/Form";
 import { Container, Content } from "./style";
@@ -22,7 +22,7 @@ const Dashboard = () => {
           )}
         </Content>
 
-        <ListCard
+        <List
           children={
             filterCards.length > 0
               ? filterCards.map((card: ICardProps, i: number) => (

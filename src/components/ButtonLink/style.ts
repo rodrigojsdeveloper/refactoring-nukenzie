@@ -51,6 +51,11 @@ const Container = styled.a<IButtonLinkStyledProps>`
           &:hover {
             box-shadow: none;
           }
+
+          &:active {
+            border-color: var(--color-primary-2);
+            background-color: var(--color-primary-2);
+          }
         `;
 
       case "gray":
@@ -58,6 +63,14 @@ const Container = styled.a<IButtonLinkStyledProps>`
           color: var(--shadow-5);
           background-color: var(--color-white);
           border: 1.5px solid var(--shadow);
+
+          &:hover {
+            background-color: var(--gray0);
+          }
+
+          &:active {
+            background-color: var(--grey-3);
+          }
         `;
 
       default:

@@ -4,7 +4,7 @@ import cardsVoids from "../../assets/NoCard.svg";
 import { useContext, useState } from "react";
 import { Container } from "./style";
 
-const ListCard = ({ children }: IListCardComponentProps) => {
+const List = ({ children }: IListCardComponentProps) => {
   const { cards, setFilterCards } = useContext(ProductContext);
 
   const [activeButton, setActiveButton] = useState("Todos");
@@ -102,4 +102,4 @@ const ListCard = ({ children }: IListCardComponentProps) => {
   );
 };
 
-export { ListCard };
+export { List };

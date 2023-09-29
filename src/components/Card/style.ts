@@ -1,6 +1,4 @@
-import lixeira_hover from "../../assets/trash-hover.svg";
 import styled, { keyframes } from "styled-components";
-import lixeira from "../../assets/trash.svg";
 
 const cardAnimation = keyframes`
   to {
@@ -23,7 +21,7 @@ const Container = styled.div`
   transform: translate(-100px);
   animation: ${cardAnimation} 0.5s ease forwards;
 
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 
   & > hr {
     width: 4px;
@@ -33,26 +31,25 @@ const Container = styled.div`
 
   & > .card-description {
     width: 100%;
-    max-width: 535px;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 
-    padding: 5px 10px 0 10px;
+    padding: 8px 14px 11px;
 
     & > .card-content {
+      height: 68px;
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
 
-      padding: 10px 0;
-
       & h2 {
         font-size: 16px;
-        color: var(--grey-4);
+        color: var(--grey-9);
 
         overflow: hidden;
         text-overflow: ellipsis;
@@ -63,40 +60,42 @@ const Container = styled.div`
 
       & > span {
         font-size: 12px;
-        color: var(--grey-6);
+        color: var(--grey-8);
       }
     }
 
     & > .card-actions {
-      width: 100%;
-      max-width: 200px;
-
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-end;
 
       & > span {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 12px;
+        line-height: 22px;
+
+        margin-bottom: 6px;
       }
 
       & > button {
-        width: 22px;
-        height: 22px;
+        width: 49px;
+        height: 19px;
 
-        background: url(${lixeira});
-        background-color: var(--grey-5);
+        font-weight: 400;
+        font-size: 10px;
 
-        transition: 1s;
+        background-color: var(--grey-4);
+        border: 2px solid var(--grey-4);
 
         &:hover {
-          background: url(${lixeira_hover});
+          border-color: var(--grey-5);
+          background-color: var(--grey-5);
         }
-      }
 
-      .divCardRight > span {
-        margin-right: 20px;
+        &:active {
+          border-color: var(--grey-6);
+          background-color: var(--grey-6);
+        }
       }
     }
 

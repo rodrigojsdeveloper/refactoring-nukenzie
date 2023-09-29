@@ -8,7 +8,7 @@ const Container = styled.form`
   flex-direction: column;
   justify-content: center;
 
-  border: 1px solid var(--grey-7);
+  border: 1px solid var(--grey-6);
   border-radius: var(--border-radius);
 
   gap: 10px;
@@ -16,7 +16,7 @@ const Container = styled.form`
 
   & > .description-input {
     & > span {
-      color: var(--grey-3);
+      color: var(--grey-7);
       font-size: 12px;
       padding-top: 5px;
     }
@@ -34,15 +34,15 @@ const Container = styled.form`
       font-size: 12px;
 
       padding: 10px 0 5px 0;
-      color: var(--grey-4);
+      color: var(--grey-9);
     }
 
     & > select {
       width: 100%;
       height: 48px;
 
-      color: var(--grey-3);
-      border: 1px solid var(--grey-7);
+      color: var(--grey-7);
+      border: 1px solid var(--grey-6);
       border-radius: var(--border-radius);
       background-color: var(--color-white);
 
@@ -52,10 +52,10 @@ const Container = styled.form`
       background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.127L12 18.127L20 10.127H4Z" fill="%23868E96"/></svg>');
       background-repeat: no-repeat;
       background-position: 0;
-      background-position-x: 97%;
+      background-position-x: 97.5%;
 
       &:focus {
-        border: 2px solid var(--grey-4);
+        border: 2px solid var(--grey-9);
         background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 15.873L12 7.873L20 15.873H4Z" fill="%23868E96"/></svg>');
       }
     }
@@ -90,6 +90,11 @@ const Container = styled.form`
 
     &:hover {
       box-shadow: none;
+    }
+
+    &:active {
+      border-color: var(--color-primary-2);
+      background-color: var(--color-primary-2);
     }
   }
 `;

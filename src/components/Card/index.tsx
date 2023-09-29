@@ -26,7 +26,7 @@ const Card = ({ card }: ICardComponentProps) => {
         <div className="card-actions">
           <span>R$ {card.price}</span>
 
-          <button onClick={() => removeCard(card)}></button>
+          <button onClick={() => removeCard(card)}>Excluir</button>
         </div>
       </div>
     </Container>

@@ -8,6 +8,7 @@ export default createGlobalStyle`
 		outline: 0;
 		box-sizing: border-box;
 		font-family: 'Nunito', sans-serif;
+		font-family: 'Nunito Sans', sans-serif;
 		scroll-behavior: smooth;
 	}
 
@@ -16,12 +17,14 @@ export default createGlobalStyle`
 		--color-primary-2: #E34981;
 		
 		--grey-1: #F8F9FA;
-		--grey-2: #E9ECEF;
-		--grey-3: #868E96;
-		--grey-4: #212529;
-		--grey-5: #F0F0F1;
-		--grey-6: #343A40;
-		--grey-7: #DCDCDC;
+		--grey-2: #F8F8F8;
+		--grey-3: #F1F1F2;
+		--grey-4: #F0F0F1;
+		--grey-5: #E9ECEF;
+		--grey-6: #DCDCDC;
+		--grey-7: #868E96;
+		--grey-8: #343A40;
+		--grey-9: #212529;
 		
 		--color-white: #FFFFFF;
 
@@ -36,7 +39,7 @@ export default createGlobalStyle`
 	}
 
 	body {
-		color: var(--grey-4);
+		color: var(--grey-9);
 		background-color: var(--color-white);
 	}
 
@@ -68,6 +71,6 @@ export default createGlobalStyle`
 
 	::-webkit-scrollbar-thumb {
 		border-radius: 0.5px;
-		background-color: var(--grey-3);
+		background-color: var(--grey-7);
 	}
 `;

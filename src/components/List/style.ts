@@ -15,7 +15,7 @@ const Container = styled.div`
 
     & > h2 {
       font-size: 16px;
-      color: var(--grey-4);
+      color: var(--grey-9);
     }
 
     .list-nav {
