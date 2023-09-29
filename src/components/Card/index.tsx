@@ -1,9 +1,9 @@
-import { ProductContext } from "../../contexts/ProductContext";
-import { ICardComponentProps } from "../../interfaces";
+import { ProductContext } from "../../contexts/product.context";
+import { ICard } from "../../interfaces";
 import { Container } from "./style";
 import { useContext } from "react";
 
-const Card = ({ card }: ICardComponentProps) => {
+const Card = ({ card }: ICard) => {
   const { removeCard } = useContext(ProductContext);
 
   return (

@@ -1,4 +1,4 @@
-import { ProductContext } from "../../contexts/ProductContext";
+import { ProductContext } from "../../contexts/product.context";
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Container } from "./style";

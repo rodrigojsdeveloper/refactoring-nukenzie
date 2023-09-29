@@ -141,7 +141,7 @@ const Home = () => {
 
           <p>com rapidez e segurança</p>
 
-          <ButtonLink href="/dashboard" size="medium" color="pink">
+          <ButtonLink href="/dashboard" size="314px" color="pink">
             Começar
           </ButtonLink>
         </div>

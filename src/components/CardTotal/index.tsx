@@ -1,9 +1,9 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { ICardTotalComponentProps } from "../../interfaces";
+import { ICardArray } from "../../interfaces";
 import { Doughnut } from "react-chartjs-2";
 import { Container } from "./style";
 
-const CardTotal = ({ cards }: ICardTotalComponentProps) => {
+const CardTotal = ({ cards }: ICardArray) => {
   ChartJS.register(ArcElement, Tooltip, Legend);
 
   const data = {

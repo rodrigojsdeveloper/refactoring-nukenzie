@@ -136,7 +136,7 @@ const Header = () => {
           </defs>
         </svg>
 
-        <ButtonLink href="/" size="small" color="gray">
+        <ButtonLink href="/" size="100px" color="gray">
           Voltar
         </ButtonLink>
       </div>

@@ -1,7 +1,7 @@
-import { IButtonLinkStyledProps } from "../../interfaces";
+import { IButtonStyle } from "../../interfaces";
 import styled, { css } from "styled-components";
 
-const Container = styled.a<IButtonLinkStyledProps>`
+const Container = styled.a<IButtonStyle>`
   width: 100%;
 
   font-weight: 500;
@@ -20,13 +20,13 @@ const Container = styled.a<IButtonLinkStyledProps>`
 
   ${({ size }) => {
     switch (size) {
-      case "small":
+      case "100px":
         return css`
           max-width: 100px;
           height: 45px;
         `;
 
-      case "medium":
+      case "314px":
         return css`
           max-width: 314px;
           height: 48px;

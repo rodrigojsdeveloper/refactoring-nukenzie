@@ -1,4 +1,4 @@
-import { ProductContext } from "../../contexts/ProductContext";
+import { ProductContext } from "../../contexts/product.context";
 import { CardTotal } from "../../components/CardTotal";
 import { Header } from "../../components/Header";
 import { ICardProps } from "../../interfaces";

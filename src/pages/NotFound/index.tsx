@@ -12,7 +12,7 @@ const NotFound = () => {
           <b>vamos tentar novamente</b>.
         </p>
 
-        <ButtonLink href="/" size="medium" color="pink">
+        <ButtonLink href="/" size="314px" color="pink">
           Ir para home
         </ButtonLink>
       </div>

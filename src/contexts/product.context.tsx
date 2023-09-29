@@ -1,16 +1,10 @@
-import { useLocalStorage } from "../../components/Hook";
+import { ICardProps, IProductContextData, IChildren } from "../interfaces";
+import { useLocalStorage } from "../components/Hook";
 import { createContext } from "react";
-import {
-  ICardProps,
-  IProductContextData,
-  IListCardComponentProps,
-} from "../../interfaces";
 
 export const ProductContext = createContext({} as IProductContextData);
 
-export const ProductContextProvider = ({
-  children,
-}: IListCardComponentProps) => {
+export const ProductContextProvider = ({ children }: IChildren) => {
   const [cards, setCards] = useLocalStorage("Nu Kenzie: cards", []);
 
   const [filterCards, setFilterCards] = useLocalStorage(
