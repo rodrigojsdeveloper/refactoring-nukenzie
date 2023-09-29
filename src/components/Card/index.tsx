@@ -24,7 +24,7 @@ const Card = ({ card }: ICardComponentProps) => {
         </div>
 
         <div className="card-actions">
-          <span>R$ {card.price}</span>
+          <span>R$ {card.price.toLocaleString("pt-BR")}</span>
 
           <button onClick={() => removeCard(card)}>Excluir</button>
         </div>

@@ -53,24 +53,14 @@ const Container = styled.div`
   }
 
   & > .list-menu {
-    & > p {
-      padding-bottom: 35px;
-    }
-
-    & > img {
-      width: 100%;
-      max-width: 550px;
-      max-height: 324px;
-    }
-
     & > menu {
-      height: 679px;
+      height: 393px;
       overflow-y: auto;
     }
   }
 
   @media (max-width: 1024px) {
-    margin: 0 auto;
+    margin: 20px auto 0;
   }
 
   @media (max-width: 768px) {
@@ -78,13 +68,7 @@ const Container = styled.div`
       flex-direction: column;
 
       & > h2 {
-        padding-bottom: 15px;
-      }
-    }
-
-    .list-menu {
-      & > p {
-        text-align: center;
+        padding-bottom: 10px;
       }
     }
   }

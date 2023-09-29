@@ -9,7 +9,8 @@ const cardAnimation = keyframes`
 
 const Container = styled.div`
   width: 100%;
-  max-width: 540px;
+  max-width: 560px;
+  height: 87px;
 
   display: flex;
   flex-direction: row;

@@ -23,11 +23,6 @@ const Container = styled.div`
     align-items: center;
 
     & > div {
-      & > img {
-        width: 123px;
-        height: 20px;
-      }
-
       & > h1 {
         width: 100%;
         max-width: 324px;
@@ -43,21 +38,14 @@ const Container = styled.div`
       }
     }
 
-    & > img {
+    & > svg {
       width: 100%;
       max-width: 593px;
-      max-height: 593px;
-
-      margin-left: 20px;
     }
 
     @media (max-width: 1024px) {
-      flex-direction: column;
-      align-items: flex-start;
-
-      & > img {
-        margin-left: 0;
-        margin-top: 60px;
+      & > svg {
+        display: none;
       }
     }
   }

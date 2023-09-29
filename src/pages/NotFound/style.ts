@@ -33,7 +33,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: flex-start;
 
-    & > img {
+    & > svg {
       margin-top: 50px;
     }
   }
@@ -41,7 +41,7 @@ const Container = styled.div`
   @media (max-width: 440px) {
     padding: 20px;
 
-    & > img {
+    & > svg {
       width: 100%;
     }
   }

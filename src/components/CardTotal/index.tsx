@@ -43,8 +43,7 @@ const CardTotal = ({ cards }: ICardTotalComponentProps) => {
               (valoAnterior, valorAtual) => valoAnterior + +valorAtual.price,
               0
             )
-            .toFixed(2)
-            .replace(".", ",")}
+            .toLocaleString("pt-BR")}
         </p>
       </p>
       <Doughnut data={data} />
