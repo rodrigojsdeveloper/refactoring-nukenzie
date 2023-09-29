@@ -26,7 +26,7 @@ const Container = styled.div`
     }
 
     &:focus::-webkit-input-placeholder {
-      color: transparent;
+      color: var(--transparent);
     }
 
     &::placeholder {

@@ -26,7 +26,6 @@ const Container = styled.div`
 
   & > hr {
     width: 4px;
-    border: none;
     border-radius: var(--border-radius) 0px 0px var(--border-radius);
   }
 
