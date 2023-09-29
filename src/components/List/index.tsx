@@ -7,7 +7,7 @@ import { Container } from "./style";
 const List = ({ children }: IListCardComponentProps) => {
   const { cards, setFilterCards } = useContext(ProductContext);
 
-  const [activeButton, setActiveButton] = useState("Todos");
+  const [activeButton, setActiveButton] = useState<string>("Todos");
 
   const handleButtonClick = (filterOption: string) => {
     setActiveButton(filterOption);

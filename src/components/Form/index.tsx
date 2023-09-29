@@ -43,9 +43,10 @@ const Form = () => {
       />
 
       <div className="value-type">
-        <label>Tipo de valor</label>
+        <label htmlFor="value">Tipo de valor</label>
 
         <select
+          id="value"
           name="options"
           required={true}
           onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
