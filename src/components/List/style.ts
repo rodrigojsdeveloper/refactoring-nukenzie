@@ -3,7 +3,6 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100%;
   max-width: 560px;
-  padding: 5px;
 
   & > .list-container {
     display: flex;
@@ -22,6 +21,8 @@ const Container = styled.div`
       display: flex;
       flex-direction: row;
 
+      column-gap: 6px;
+
       & > button {
         width: 100%;
         height: 45px;
@@ -38,16 +39,6 @@ const Container = styled.div`
         color: var(--shadow-5);
 
         padding: 15px;
-        margin: 0 5px;
-      }
-
-      @media (max-width: 332px) {
-        width: 100%;
-        flex-direction: column;
-
-        & > button {
-          margin: 5px 0;
-        }
       }
     }
   }
@@ -55,7 +46,12 @@ const Container = styled.div`
   & > .list-menu {
     & > menu {
       height: 393px;
+
+      display: flex;
+      flex-direction: column;
+
       overflow-y: auto;
+      row-gap: 15px;
     }
   }
 
@@ -63,13 +59,10 @@ const Container = styled.div`
     margin: 20px auto 0;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 640px) {
     .list-container {
       flex-direction: column;
-
-      & > h2 {
-        padding-bottom: 10px;
-      }
+      row-gap: 10px;
     }
   }
 `;

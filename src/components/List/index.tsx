@@ -1,10 +1,10 @@
 import { ProductContext } from "../../contexts/product.context";
-import { ICardProps, IChildren } from "../../interfaces";
-import { useContext, useState } from "react";
+import { useContext, useState, PropsWithChildren } from "react";
+import { ICardProps } from "../../interfaces";
 import { CardsEmpty } from "../CardsEmpty";
 import { Container } from "./style";
 
-const List = ({ children }: IChildren) => {
+const List = ({ children }: PropsWithChildren) => {
   const { cards, setFilterCards } = useContext(ProductContext);
 
   const [activeButton, setActiveButton] = useState<string>("Todos");

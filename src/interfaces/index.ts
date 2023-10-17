@@ -35,10 +35,6 @@ export interface ICardArray {
   cards: Array<ICardProps>;
 }
 
-export interface IChildren {
-  children: React.ReactNode;
-}
-
 export interface IProductContextData {
   cards: any;
   filterCards: any;

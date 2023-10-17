@@ -11,7 +11,7 @@ const Form = () => {
 
   const { register, handleSubmit, reset } = useForm();
 
-  const onSubmitFunc = (data: any) => {
+  const onSubmitFunction = (data: any) => {
     const { description, price } = data;
 
     const newData = { description, price, option };
@@ -21,7 +21,7 @@ const Form = () => {
   };
 
   return (
-    <Container onSubmit={handleSubmit(onSubmitFunc)}>
+    <Container onSubmit={handleSubmit(onSubmitFunction)}>
       <div className="description-input">
         <Input
           type="text"

@@ -8,7 +8,7 @@ const Container = styled.main`
   justify-content: center;
   align-items: center;
 
-  padding: 20px;
+  padding: 8px;
 
   color: var(--color-white);
   background-color: var(--grey-9);

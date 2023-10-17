@@ -10,7 +10,7 @@ const Container = styled.main`
   justify-content: space-between;
   align-items: center;
 
-  padding: 40px;
+  padding: 20px 40px;
   margin: 0 auto;
 
   & > div {
@@ -38,8 +38,8 @@ const Container = styled.main`
     }
   }
 
-  @media (max-width: 440px) {
-    padding: 20px;
+  @media (max-width: 640px) {
+    padding: 20px 8px;
 
     & > svg {
       width: 100%;

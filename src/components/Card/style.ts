@@ -22,8 +22,6 @@ const Container = styled.div`
   transform: translate(-100px);
   animation: ${cardAnimation} 0.5s ease forwards;
 
-  margin-bottom: 15px;
-
   & > hr {
     width: 4px;
     border-radius: var(--border-radius) 0px 0px var(--border-radius);
@@ -37,7 +35,7 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    padding: 8px 14px 11px;
+    padding: 8px 14px;
 
     & > .card-content {
       height: 68px;
@@ -99,21 +97,24 @@ const Container = styled.div`
       }
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 640px) {
       flex-direction: column;
+      align-items: flex-start;
 
       & > .card-actions {
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
-
-        padding-bottom: 10px;
 
         & > span {
           padding-bottom: 10px;
         }
       }
     }
+  }
+
+  @media (max-width: 640px) {
+    height: 156px;
   }
 `;
 

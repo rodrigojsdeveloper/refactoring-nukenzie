@@ -7,13 +7,13 @@ const Container = styled.main`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  column-gap: 30px;
 
-  padding: 10px;
+  padding: 8px;
   margin: 39px auto;
 
   @media (max-width: 1024px) {
     flex-direction: column;
-
     margin: 29px auto;
   }
 `;
@@ -25,8 +25,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin-right: 30px;
+  row-gap: 15px;
 
   @media (max-width: 1024px) {
     margin: 0 auto;

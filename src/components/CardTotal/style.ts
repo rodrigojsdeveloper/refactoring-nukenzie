@@ -13,7 +13,6 @@ const Container = styled.div`
   background-color: var(--color-white);
 
   padding: 10px;
-  margin-top: 15px;
 
   & > p {
     display: flex;
